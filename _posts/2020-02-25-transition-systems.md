@@ -11,7 +11,7 @@ Transition systems appear in many facets of system modelling; they give an intui
 ## What is a state?
 ## Definitions
 
-<u>**Definition 1: Labelled Transition System (LTS)**</u>:
+**<u>Definition 1: Labelled Transition System (LTS)</u>**:
 The following tuple characterizes a LTS:
 	
   $$(S, i, L, \mathit{Tran})$$,
