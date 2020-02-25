@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Transition Systems
 date: '2020-02-25'
 ---
