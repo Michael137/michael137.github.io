@@ -31,8 +31,6 @@ where
 
 **<u>Definition 2: Reachability</u>**:
 
-A transition system
-
 # Example
 
 # Sources
