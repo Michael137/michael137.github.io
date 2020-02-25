@@ -23,6 +23,7 @@ navbar-links:
   About: "about"
   Writings:
     - TLDR: "tldr"
+    - Translations: "translations"
     - Topics:
       - Concurrency: "concurrency"
       - Hardware: "hardware"
