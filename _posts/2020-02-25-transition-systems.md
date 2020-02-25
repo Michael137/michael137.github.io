@@ -13,7 +13,7 @@ Transition systems appear in many facets of system modelling; they give an intui
 
 The following tuple characterizes a labelled tranisition system (LTS):
 	
-    $$(S, i, L, Tran)$$,
+  $$(S, i, L, Tran)$$,
 
 where
 * S: set of states
