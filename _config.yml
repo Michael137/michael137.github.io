@@ -23,7 +23,7 @@ navbar-links:
   About: "about"
   Writings:
     - TLDR: "tldr"
-    - Translations: "translations"
+    - Chernobyl: "chernobyl"
     - Topics:
       - Concurrency: "concurrency"
       - Hardware: "hardware"
