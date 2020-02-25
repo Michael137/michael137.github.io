@@ -17,8 +17,8 @@ where
 * S: set of states
 * i: initial state
 * L: set of labels that specify the possible set of actions between two states
-* $$Tran \subset S \times L \times S$$: is the \textit{transition relation}
+* $$Tran \subset S \times L \times S$$: is the *transition relation*
   * This is the set of transitions that occurred in the system
-  * \textit{Tran} describes the behaviour of the LTS
+  * *Tran* describes the behaviour of the LTS
 
 # Example
