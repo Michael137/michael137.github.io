@@ -11,8 +11,8 @@ Transition systems appear in many facets of system modelling; they give an intui
 ## What is a state?
 ## Definitions
 
-<u>**Definition 1**</u>:
-The following tuple characterizes a labelled tranisition system (LTS):
+<u>**Definition 1: Labelled Transition System (LTS)**</u>:
+The following tuple characterizes a LTS:
 	
   $$(S, i, L, \mathit{Tran})$$,
 
@@ -25,7 +25,8 @@ where
   * *Tran* describes the behaviour of the LTS
   * A transition labelled $$\alpha$$ $$s \xrightarrow{\alpha} s'$$ between two states (*s* and *s'*), is described by: $$(s, a, s') \in \mathit{Tran}$$
 
-**Definition 1**:
+<u>**Definition 2: Reachability**</u>:
+
 
 # Example
 
