@@ -25,7 +25,9 @@ where
   * This is the set of transitions that occurred in the system
   * *Tran* describes the behaviour of the LTS
   * A transition labelled $$\alpha$$ $$s \xrightarrow{\alpha} s'$$ between two states (*s* and *s'*), is described by: $$(s, a, s') \in \mathit{Tran}$$
-  * A transition $$s \xrightarrow{v} s'$$ where $$v = \alpha_{1}\alpha_{2} \dots \alpha{n}$$ describes a series of transitions of the form: $$s \xrightarrow{\alpha_{1}} s_{1} \xrightarrow{\alpha_{2}} \dots \xrightarrow{\alpha_{n}} s_{n}$$
+  * A transition $$s \xrightarrow{v} s'$$ where $$v = \alpha_{1}\alpha_{2} \dots \alpha_{n}$$ describes a series of transitions of the form:
+  
+  $$s \xrightarrow{\alpha_{1}} s_{1} \xrightarrow{\alpha_{2}} \dots \xrightarrow{\alpha_{n}} s_{n}$$
 
 **<u>Definition 2: Reachability</u>**:
 
