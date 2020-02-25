@@ -13,15 +13,16 @@ Transition systems appear in many facets of system modelling; they give an intui
 
 The following tuple characterizes a labelled tranisition system (LTS):
 	
-  $$(S, i, L, Tran)$$,
+  $$(S, i, L, \mathit{Tran})$$,
 
 where
 * S: set of states
 * i: initial state
 * L: set of labels that specify the possible set of actions between two states
-* $$Tran \subset S \times L \times S$$: is the *transition relation*
+* $$\mathit{Tran} \subset S \times L \times S$$: is the *transition relation*
   * This is the set of transitions that occurred in the system
   * *Tran* describes the behaviour of the LTS
+  * A transition $$s \xrightarrow{\a} s'$$ between two states, *s, s'*, is described by $$(s, a, s') \in \mathit{Tran}$$
 
 # Example
 
