@@ -9,8 +9,9 @@ Transition systems appear in many facets of system modelling; they give an intui
 
 # Formalisms
 ## What is a state?
-## Definition
+## Definitions
 
+<u>**Definition 1**</u>:
 The following tuple characterizes a labelled tranisition system (LTS):
 	
   $$(S, i, L, \mathit{Tran})$$,
@@ -23,6 +24,8 @@ where
   * This is the set of transitions that occurred in the system
   * *Tran* describes the behaviour of the LTS
   * A transition labelled $$\alpha$$ $$s \xrightarrow{\alpha} s'$$ between two states (*s* and *s'*), is described by: $$(s, a, s') \in \mathit{Tran}$$
+
+**Definition 1**:
 
 # Example
 
