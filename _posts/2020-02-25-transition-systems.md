@@ -41,7 +41,7 @@ $$\mathit{Tran_{*}} = \mathit{Tran} \cup \{(s, *, s) \: | \: s \in S\}$$
 ## Operations on Transition Systems
 **<u>Definition 5</u>**: Restriction:
 
-Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subset L'$$. *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, a, t) \in \mathit{Tran'} \: | \: a \in L \}$$
+Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$. *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, a, t) \in \mathit{Tran'} \: | \: a \in L \}$$
 
 In some process languages, such as Milner's CCS, communication is performed via input and output channels between process that are connected via ports. The restriction operation limits communication to a set of ports. In transition systems, restriction removes a set of transitions from its labelling set.
 
