@@ -36,12 +36,12 @@ where
 
 **<u>Definition 4: Idle transitions</u>**: An *idle transition* of a transition system, $$T = (S, i, L, \mathit{Tran})$$, is a transition, $$(s, *, s)$$, where $$s \in S$$. A transition system with idle transitions is defined as:
 
-$$\mathit{Tran_{*}} = \mathit{Tran} \cup \{(s, *, s) \: | \: s \in S\}$$
+$$\mathit{Tran_{*}} = \mathit{Tran} \cup \{(s, *, s) \: \vert \: s \in S\}$$
 
 ## Operations on Transition Systems
 **<u>Definition 5</u>**: Restriction:
 
-Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$. *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, \alpha, t) \in \mathit{Tran'} \| \alpha \in L \}$$
+Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$. *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, \alpha, t) \in \mathit{Tran'} \vert \alpha \in L \}$$
 
 where $$\lambda : L \hookrightarrow L'$$ takes label, $$\alpha$$, in $$L$$ to label, $$\alpha$$, in $$L'$$.
 
