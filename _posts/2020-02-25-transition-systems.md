@@ -36,7 +36,7 @@ where
 
 **<u>Definition 4: Idle transitions</u>**: An *idle transition* of a transition system, $$T = (S, i, L, \mathit{Tran})$$, is a transition, $$(s, *, s)$$, where $$s \in S$$. A transition system with idle transitions is defined as:
 
-$$\mathit{Tran_{\*}} = \mathit{Tran} \cup \{(s, *, s) \: | \: s \in S\}$$
+$$\mathit{Tran_{*}} = \mathit{Tran} \cup \{(s, *, s) \: | \: s \in S\}$$
 
 ## Operations on Transition Systems
 **<u>Definition 5</u>**: Restriction
