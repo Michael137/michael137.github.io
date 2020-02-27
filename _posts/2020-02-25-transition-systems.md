@@ -41,7 +41,7 @@ $$\mathit{Tran_{*}} = \mathit{Tran} \cup \{(s, *, s) \: | \: s \in S\}$$
 ## Operations on Transition Systems
 **<u>Definition 5</u>**: Restriction:
 
-Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$. *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, \alpha, t)$$
+Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$. *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, \alpha, t) \in \mathit{Tran'}$$
 
 where $$\lambda : L \hookrightarrow L'$$ takes label, $$\alpha$$, in $$L$$ to label, $$\alpha$$, in $$L'$$.
 
