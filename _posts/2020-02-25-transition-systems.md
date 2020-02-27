@@ -34,7 +34,7 @@ where
 
 **<u>Definition 3: Acyclicity</u>**: $$T$$ is acyclic iff for all sequences of labels, $$v$$, if $$s \xrightarrow{v} s$$ then $$v = nil$$.
 
-Idle transitions 
+**<u>Definition 4: Acyclicity</u>**: 
 
 # Example
 
