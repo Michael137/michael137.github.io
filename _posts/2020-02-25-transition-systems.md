@@ -18,6 +18,7 @@ The following tuple characterizes a LTS:
 
 where
 * S: set of states
+[comment]: <> * What is a state?
 * i: initial state
 * L: set of labels that specify the possible set of actions between two states
 * $$\mathit{Tran} \subseteq S \times L \times S$$: is the *transition relation*
