@@ -21,7 +21,7 @@ where
   * What is a state?:
 * i: initial state
 * L: set of labels that specify the possible set of actions between two states
-* $$\mathit{Tran} \subset S \times L \times S$$: is the *transition relation*
+* $$\mathit{Tran} \subseteq S \times L \times S$$: is the *transition relation*
   * This is the set of transitions that occurred in the system
   * *Tran* describes the behaviour of the LTS
   * A transition $$s \xrightarrow{\alpha} s'$$ between two states is described by: $$(s, a, s') \in \mathit{Tran}$$
