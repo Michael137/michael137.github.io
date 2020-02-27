@@ -40,10 +40,15 @@ $$\mathit{Tran_{\*}} = \mathit{Tran} \cup \{(s, \*, s) | s \in S\}$$
 
 ## Operations on Transition Systems
 **<u>Definition 5</u>**: Restriction
+
 **<u>Definition 6</u>**: Relabelling
+
 **<u>Definition 7</u>**: Product
+
 **<u>Definition 8</u>**: Composition
+
 **<u>Definition 9</u>**: Sum
+
 **<u>Definition 10</u>**: Prefixing
 
 
