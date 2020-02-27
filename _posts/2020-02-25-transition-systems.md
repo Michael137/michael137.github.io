@@ -43,6 +43,8 @@ $$\mathit{Tran_{*}} = \mathit{Tran} \cup \{(s, *, s) \: | \: s \in S\}$$
 
 Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$. *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, a, t) \in \mathit{Tran'} \: | \: a \in L \}$$
 
+where $$\lambda : L \hookrightarrow L'$$ takes labels in $$L$$ to labels in $$L'$$.
+
 In some process languages, such as Milner's CCS, communication is performed via input and output channels between process that are connected via ports. The restriction operation limits communication to a set of ports. In transition systems, restriction removes a set of transitions from its labelling set.
 
 **<u>Definition 6</u>**: Relabelling
