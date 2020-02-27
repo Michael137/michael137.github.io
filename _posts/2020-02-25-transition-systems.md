@@ -28,8 +28,11 @@ where
   * A transition $$s \xrightarrow{v} s'$$ where $$v = \alpha_{1}\alpha_{2} \dots \alpha_{n}$$ describes a series of transitions of the form:
   
   $$s \xrightarrow{\alpha_{1}} s_{1} \xrightarrow{\alpha_{2}} \dots \xrightarrow{\alpha_{n}} s_{n}$$
+    * A sequence $$v = nil$$ denotes the non-existence of a transition between two states
 
-**<u>Definition 2: Reachability</u>**:
+**<u>Definition 2: Reachability</u>**: $$T = (S, i, L, \mathit{Tran})$$ is reachable iff for every label, $$\alpha$$, there is a transition, $$(s, a, s') \in \mathit{Tran}$$
+
+**<u>Definition 3: Acyclicity</u>**: $$T$$ is acyclic iff for all sequences of labels, $$v$$, if $$s \xrightarrow{v} s$$ then $$v$$.
 
 # Example
 
