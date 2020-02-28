@@ -9,6 +9,8 @@ Transition systems appear in many facets of system modelling; they give an intui
 
 Transition systems give a convienent model for reasoning about inifite-state systems. There is a fundamental relationship between semantics of programming languages and theory of transition systems. In a sense describe the operational semantics of process calculi such as CCS and CSP. Conversely, a transition system can be derived from the operational semantics of a language. The semantics of CCS allow for the relabelling, restriction and parallel composition of processes. Below is a summary of how these operatins can be described in terms of operations on transition systems.
 
+Below is a summary of the definitions of transitions systems found in Winskel and Nielsen [1] together with their categorical implications.
+
 # Formalisms
 ## Definitions
 
@@ -59,6 +61,8 @@ In some process languages, such as Milner's CCS, communication is performed via 
 where $$\mathit{Tran'} = \{(s, \lambda(a), s') \: \vert \: (s, a, s') \in \mathit{Tran}\}$$
 
 **<u>Definition 7</u>**: Product
+
+
 
 Synchronization in process languages occurs via parallel composition, e.g., by combining input channels of one process with the output channels of another. Below definition implies that the product on transition systems is a special case of parallel composition where all possible synchronizations are allowed.
 
