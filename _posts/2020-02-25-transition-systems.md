@@ -7,7 +7,7 @@ date: '2020-02-25'
 # Motivation
 Transition systems appear in many facets of system modelling; they give an intuitive formalism to the operation of a system, namely functions on state.
 
-Transition systems give a convienent model for reasoning about inifite-state systems. There is a fundamental relationship between semantics of programming languages and theory of transition systems. In a sense describe the operational semantics of process calculi such as CCS and CSP. Conversely, a transition system can be derived from the operational semantics of a language.
+Transition systems give a convienent model for reasoning about inifite-state systems. There is a fundamental relationship between semantics of programming languages and theory of transition systems. In a sense describe the operational semantics of process calculi such as CCS and CSP. Conversely, a transition system can be derived from the operational semantics of a language. The semantics of CCS allow for the relabelling, restriction and parallel composition of processes. Below is a summary of how these operatins can be described in terms of operations on transition systems.
 
 # Formalisms
 ## Definitions
