@@ -7,6 +7,8 @@ date: '2020-02-25'
 # Motivation
 Transition systems appear in many facets of system modelling; they give an intuitive formalism to the operation of a system, namely functions on state.
 
+Transition systems give a convienent model for reasoning about inifite-state systems and in a sense describe the operational semantics of process calculi such as CCS and CSP.
+
 # Formalisms
 ## Definitions
 
