@@ -62,7 +62,15 @@ where $$\mathit{Tran'} = \{(s, \lambda(a), s') \: \vert \: (s, a, s') \in \mathi
 
 **<u>Definition 7</u>**: Product
 
+- Let transition system $$T_0 = (S_0, i_0, L_0, \mathit{Tran_0})$$
+- Let transition system $$T_1 = (S_1, i_1, L_1, \mathit{Tran_1})$$
+- The *product* $$T_0 \times T_1 = (S, i, L, \mathit{Tran})$$
 
+where
+
+    - $$S = S_0 \times S_1$$ with $$i = (i_0, i_1)$$ and projections
+      - $$\rho_0 : S_0 \times S_1 \rightarrow S_0$$
+      - $$\rho_1 : S_0 \times S_1 \rightarrow S_1$$
 
 Synchronization in process languages occurs via parallel composition, e.g., by combining input channels of one process with the output channels of another. Below definition implies that the product on transition systems is a special case of parallel composition where all possible synchronizations are allowed.
 
