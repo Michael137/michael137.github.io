@@ -43,7 +43,7 @@ where
 $$\mathit{Tran_{*}} = \mathit{Tran} \cup \{(s, *, s) \: \vert \: s \in S\}$$
 
 ## Operations on Transition Systems
-**<u>Definition 5</u>**: Restriction:
+**<u>Definition 5</u>**: Restriction
 
 - Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$.
 - *Restriction* $$T' \upharpoonright \lambda$$ results in the transition system $$T = \{(s, \alpha, t) \in \mathit{Tran'} \: \vert \: \alpha \in L \}$$
@@ -71,6 +71,7 @@ where
     - $$S = S_0 \times S_1$$ with $$i = (i_0, i_1)$$ and projections
       - $$\rho_0 : S_0 \times S_1 \rightarrow S_0$$
       - $$\rho_1 : S_0 \times S_1 \rightarrow S_1$$
+    - $$L = L_0 \times_{*} L_1 = \{(a, *) \: \vert \: a \in L_0 \} \cup
 
 Synchronization in process languages occurs via parallel composition, e.g., by combining input channels of one process with the output channels of another. Below definition implies that the product on transition systems is a special case of parallel composition where all possible synchronizations are allowed.
 
