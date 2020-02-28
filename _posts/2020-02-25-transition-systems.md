@@ -47,7 +47,7 @@ Let transition system $$T' = (S, i, L', \mathit{Tran'})$$ and $$L \subseteq L'$$
 
 where $$\lambda : L \hookrightarrow L'$$ takes label, $$\alpha$$, in $$L$$ to label, $$\alpha$$, in $$L'$$.
 
-In some process languages, such as Milner's CCS, communication is performed via input and output channels between process that are connected via ports. The restriction operation limits communication to a set of ports. In transition systems, restriction removes a set of transitions from its labelling set.
+In some process languages, such as Milner's CCS, communication is performed via input and output channels between processes that are connected via ports. The restriction operation limits communication to a set of ports. In transition systems, restriction removes a set of transitions from its labelling set.
 
 **<u>Definition 6</u>**: Relabelling
 
