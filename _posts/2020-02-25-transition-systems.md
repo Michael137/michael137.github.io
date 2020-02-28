@@ -60,7 +60,9 @@ where $$\mathit{Tran'} = \{(s, \lambda(a), s') \: \vert \: (s, a, s') \in \mathi
 
 **<u>Definition 7</u>**: Product
 
-**<u>Definition 8</u>**: Composition
+Synchronization in process languages occurs via parallel composition, e.g., by combining input channels of one process with the output channels of another. Below definition implies that the product on transition systems is a special case of parallel composition where all possible synchronizations are allowed.
+
+**<u>Definition 8</u>**: Parallel Composition
 
 **<u>Definition 9</u>**: Sum
 
