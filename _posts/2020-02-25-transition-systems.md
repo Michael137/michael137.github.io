@@ -72,6 +72,7 @@ where
       - $$\rho_0 : S_0 \times S_1 \rightarrow S_0$$
       - $$\rho_1 : S_0 \times S_1 \rightarrow S_1$$
    - $$L = L_0 \times_{*} L_1 = \{(a, *) \: \vert \: a \in L_0 \} \cup \{(*, b) \: \vert \: b \in L_1\} \cup \{(a,b) \: \vert \: a \in L_0, b \in L_1\}$$ and projections $$\pi_0$$, $$\pi_1$$
+   - $$(s, a, s') \in \mathit{Tran_{*}} \iff (\rho_0(s), \pi_0(a), \rho_0(s')) \in \mathit{Tran_0*} & (\rho_1(s), \pi_1(a), \rho_1(s')) \in \mathit{Tran_1*}
 
 Synchronization in process languages occurs via parallel composition, e.g., by combining input channels of one process with the output channels of another. Below definition implies that the product on transition systems is a special case of parallel composition where all possible synchronizations are allowed.
 
