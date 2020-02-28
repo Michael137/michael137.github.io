@@ -58,8 +58,6 @@ In some process languages, such as Milner's CCS, communication is performed via 
 
 where $$\mathit{Tran'} = \{(s, \lambda(a), s' \: \vert \: (s, a, s') \in \mathit{Tran}\}
 
-Given a relabelling moprphism 
-
 **<u>Definition 7</u>**: Product
 
 **<u>Definition 8</u>**: Composition
