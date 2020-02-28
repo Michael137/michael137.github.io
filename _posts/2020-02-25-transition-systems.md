@@ -52,7 +52,13 @@ In some process languages, such as Milner's CCS, communication is performed via 
 
 **<u>Definition 6</u>**: Relabelling
 
-- 
+- Let transition system $$T = (S, i, L, \mathit{Tran})$$
+- Let $$\lambda : L \rightarrow L'$$ be a morphism between relabelling sets
+- *Relabelling* $$T\{\lambda\}$$ results in the transition system $$T' = (S, i, L', \mathit{Tran'})$$
+
+where $$\mathit{Tran'} = \{(s, \lambda(a), s' \: \vert \: (s, a, s') \in \mathit{Tran}\}
+
+Given a relabelling moprphism 
 
 **<u>Definition 7</u>**: Product
 
