@@ -78,11 +78,7 @@ Synchronization in process languages occurs via parallel composition, e.g., by c
 
 Diagrammatically we can express the product $$T_0 \times T_1$$ as:
 
-$$T_0$$
-
-<iframe src="http://bl.ocks.org/mbostock/raw/4061502/0a200ddf998aa75dfdb1ff32e16b680a15e5cb01/" marginwidth="0" marginheight="0" scrolling="no" frameBorder="0">
-Browser not compatible with this iFrame
-</iframe>
+$$T_0$$ ![](/img/post0_lts_1.jpg)
 
 **<u>Definition 8</u>**: Parallel Composition
 
