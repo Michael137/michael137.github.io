@@ -76,6 +76,16 @@ where
 
 Synchronization in process languages occurs via parallel composition, e.g., by combining input channels of one process with the output channels of another. Below definition implies that the product on transition systems is a special case of parallel composition where all possible synchronizations are allowed.
 
+Diagrammatically we can express the product $$T_0 \times T_1$$ as:
+
+$$T_0$$
+
+<script type="text/tikz">
+  \begin{tikzpicture}
+    \draw (0,0) circle (1in);
+  \end{tikzpicture}
+</script>
+
 **<u>Definition 8</u>**: Parallel Composition
 
 **<u>Definition 9</u>**: Sum
