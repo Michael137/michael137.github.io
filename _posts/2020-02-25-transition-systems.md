@@ -78,8 +78,8 @@ Synchronization in process languages occurs via parallel composition, e.g., by c
 
 Diagrammatically we can express the product $$T_0 \times T_1$$ as:
 
-$$T_0$$ ![](/img/post0_lts_arr1.png)
-$$T_1$$ ![](/img/post0_lts_arr2.png)
+$$T_0$$ ![IMG1](/img/post0_lts_arr1.png)
+$$T_1$$ ![IMG2](/img/post0_lts_arr2.png)
 
 **<u>Definition 8</u>**: Parallel Composition
 
