@@ -84,8 +84,6 @@ $$T_0$$
 Browser not compatible with this iFrame
 </iframe>
 
-
-
 **<u>Definition 8</u>**: Parallel Composition
 
 **<u>Definition 9</u>**: Sum
