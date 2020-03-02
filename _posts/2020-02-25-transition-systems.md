@@ -87,8 +87,7 @@ Then,
 - $$\{a\} \times_{*} \{b\} = \{(a,*), (a, b), (*, b)\}$$
 - Diagrammatically the product is expressed as,
 
-
-
+The transition $$(a, b)$$ represents a synchronized transition while transitions involving only a single label (e.g., $$(a, *)$$) represent a process performing an unsynchronized transition. As hinted at earlier, this type of parallel composition essentially allows all processes to perform all combinations of possible synchronized/unsynchronized transitions, which is not representative of real-world systems. However, combining the product on LTSes with restriction and relabelling can achieve more useful parallel compositions.
 
 **<u>Definition 8</u>**: Parallel Composition
 
