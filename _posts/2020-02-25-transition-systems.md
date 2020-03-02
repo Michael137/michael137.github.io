@@ -79,8 +79,8 @@ Synchronization in process languages occurs via parallel composition, e.g., by c
 **Example Product**
 Given two transition systems, $$T_0$$ and $$T_1$$, with labelling sets (i.e., set of possible actions) $$\{a\}$$ and $$\{b\}$$ respectively:
 
-{{ /img/post0_lts_arr1.png:img?width=250 alt='lts1' }}
-{{ /img/post0_lts_arr2.png:img?width=250 alt='lts2' }}
+{{ /img/post0_lts_arr1.png:img?width=60 alt='lts1' }}
+{{ /img/post0_lts_arr2.png:img?width=60 alt='lts2' }}
 
 Then,
 
