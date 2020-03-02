@@ -24,7 +24,6 @@ navbar-links:
   Writings:
     - Concurrency: "concurrency"
     - Hardware: "hardware"
-    - OccamOS: "occamos"
     - Logic: "logic"
     - Cybernetics: "cybernetics"
     - Chernobyl: "chernobyl"
