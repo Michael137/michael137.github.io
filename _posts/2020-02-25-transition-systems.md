@@ -107,9 +107,7 @@ Sums in process calculi specify the combination of several processes  into a sin
 - Let $$T_0 = (S_0, i_0, L_0, \mathit{Tran_0})$$
 - Let $$T_1 = (S_1, i_1, L_1, \mathit{Tran_1})$$
 - $$T_0 + T_1 = (S, i, L, \mathit{Tran})$$ where
-  - $$S = (S_0 \times \{i_1\}) \cup (\{i_0\} \times S_1)$$ with
-    - $$i = (i_0, i_1)$$
-    - injections $$n_{0}, n_1$$
+  - $$S = (S_0 \times \{i_1\}) \cup (\{i_0\} \times S_1)$$ with $$i = (i_0, i_1)$$ and injections $$n_{0}, n_1$$
   - 
 
 **<u>Definition 10</u>**: Prefixing
