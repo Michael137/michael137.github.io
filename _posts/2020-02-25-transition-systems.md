@@ -28,7 +28,7 @@ where
 * $$\mathit{Tran} \subseteq S \times L \times S$$: is the *transition relation*
   * This is the set of transitions that occurred in the system
   * *Tran* describes the behaviour of the LTS
-  * A transition $$s \xrightarrow{\alpha} s'$$ between two states is described by: $$(s, a, s') \in \mathit{Tran}$$
+  * A transition $$s \xrightarrow{\alpha} s'$$ between two states is described by: $$(s, \alpha, s') \in \mathit{Tran}$$
   * A transition $$s \xrightarrow{v} s'$$ where $$v = \alpha_{1}\alpha_{2} \dots \alpha_{n}$$ describes a series of transitions of the form:
   
   $$s \xrightarrow{\alpha_{1}} s_{1} \xrightarrow{\alpha_{2}} \dots \xrightarrow{\alpha_{n}} s_{n}$$
