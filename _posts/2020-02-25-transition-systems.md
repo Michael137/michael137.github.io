@@ -96,8 +96,9 @@ The transition $$(a, b)$$ represents a synchronized transition while transitions
 
 **<u>Definition 8</u>**: Parallel Composition
 
-One can obtain prallel composition from restriction and relabelling on the product $$T_0 \times T_1$$ with labelling sets $$L_{0}, L_1 respectivaly by:
-1. 
+One can obtain prallel composition from restriction and relabelling on the product $$T_{0}, T_1$$ with labelling sets $$L_{0}, L_1$$ respectively by:
+1. Taking *product* $$T_0 \times T_1$$ to obtain labelling set $$L_0 \times_{*} L_1$$
+2. *Restricting* by $$S \subseteq L_0 \times_{*} L_1$$: $$(T_0 \times T_1) \hookrightarrow S$$
 
 **<u>Definition 9</u>**: Sum
 
