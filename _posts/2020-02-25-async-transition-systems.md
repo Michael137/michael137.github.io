@@ -2,7 +2,7 @@
 layout: post
 published: true
 title: Asynchronous Transition Systems
-date: '2020-02-25'
+date: '2020-03-08'
 ---
 # Motivation
 # Formalisms
