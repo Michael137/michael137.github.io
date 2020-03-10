@@ -112,8 +112,6 @@ Sums in process calculi specify the combination of several processes  into a sin
   - $$t \in \mathit{Tran} \iff \exists (s, \alpha, s') \in \mathit{Tran_0}. t = (\mathit{in_0}(s), j_{0}(\alpha), \mathit{in_0}(s')) \vee
   		\exists (s, \alpha, s') \in \mathit{Tran_1}. t = (\mathit{in_1}(s), j_{1}(\alpha), \mathit{in_1}(s'))$$
 
-
-
 **<u>Definition 10</u>**: Prefixing
 
 
