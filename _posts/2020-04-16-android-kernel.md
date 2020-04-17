@@ -39,20 +39,20 @@ lunch aosp_blueline-userdebug
 - Run:
 	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
-  - **sepolicy_tests** failure:
-    - Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
-    - You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
-  - **sha256sum not found**: brew install coreutils
-  - **UTF-8 encoding**: export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
-    - See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
-  - **ld: symbol(s) not found for architecture i386**: your MacOS SDK is too recent. Select the SDK that is supported by your AOSP build
-  - **ERROR: Couldn't create a device interface iterator**: your fastboot is outdated for MacOS (probably because it's using the one you built with AOSP). [Download the latest fastboot and adb](https://android.stackexchange.com/questions/209725/fastboot-devices-command-doesnt-work-after-macos-high-sierra-10-14-4-upgrade) and use these
-  - **Fastboot operation not supported**: Flash the factory image for the operating system you are replacing and retry the fastboot flashall
-  - **Could not find a supported Mac SDK**: see [this SO post](https://stackoverflow.com/questions/50760701/could-not-find-a-supported-mac-sdk-10-10-10-11-10-12-10-13) for more details
-    - You can download an old SDK by following [these instructions](https://roadfiresoftware.com/2017/09/how-to-install-multiple-versions-of-xcode-at-the-same-time/)
-    - Make sure **xcodebuild -showsdks** returns a SDK compatible with the AOSP build
-    - **Symbol not found: _OBJC_IVAR_$_NSScroller._action**: xselect Xcode
-    - Alternatively you can also copy the SDK into the existing Xcode.app: Download from [here](https://github.com/phracker/MacOSX-SDKs/releases) and copy it to **/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs**
+  		- **sepolicy_tests** failure:
+    		- Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
+    		- You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
+ 		- **sha256sum not found**: brew install coreutils
+		- **UTF-8 encoding**: export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+		- See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
+  		- **ld: symbol(s) not found for architecture i386**: your MacOS SDK is too recent. Select the SDK that is supported by your AOSP build
+  		- **ERROR: Couldn't create a device interface iterator**: your fastboot is outdated for MacOS (probably because it's using the one you built with AOSP). [Download the latest fastboot and adb](https://android.stackexchange.com/questions/209725/fastboot-devices-command-doesnt-work-after-macos-high-sierra-10-14-4-upgrade) and use these
+  		- **Fastboot operation not supported**: Flash the factory image for the operating system you are replacing and retry the fastboot flashall
+  		- **Could not find a supported Mac SDK**: see [this SO post](https://stackoverflow.com/questions/50760701/could-not-find-a-supported-mac-sdk-10-10-10-11-10-12-10-13) for more details
+				- You can download an old SDK by following [these instructions](https://roadfiresoftware.com/2017/09/how-to-install-multiple-versions-of-xcode-at-the-same-time/)
+    			- Make sure **xcodebuild -showsdks** returns a SDK compatible with the AOSP build
+    			- **Symbol not found: _OBJC_IVAR_$_NSScroller._action**: xselect Xcode
+    			- Alternatively you can also copy the SDK into the existing Xcode.app: Download from [here](https://github.com/phracker/MacOSX-SDKs/releases) and copy it to **/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs**
 
 **Result**: the resulting images should be located in **$AOSP_ROOT/out/target/product/blueline**
 
