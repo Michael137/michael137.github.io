@@ -39,7 +39,6 @@ lunch aosp_blueline-userdebug
 - Run:
 	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
-
 		- **sepolicy_tests** failure:
 				- Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
 				- You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
