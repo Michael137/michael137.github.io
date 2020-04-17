@@ -114,8 +114,5 @@ Sums in process calculi specify the combination of several processes  into a sin
 
 **<u>Definition 10</u>**: Prefixing
 
-
-# Example
-
 # Sources
 [1] [Models for Concurrency - Glynn Winskel and Mogens Nielsen](https://dl.acm.org/doi/10.5555/218623.218630)
