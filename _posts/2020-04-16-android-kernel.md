@@ -10,7 +10,7 @@ Below steps are largely taken from the official [Android Docs](https://source.an
 
 # Requirements
 - 250 GB free space
-  - I built AOSP on an external SSD
+  - When working off of an external drive make sure it is formatted as **Mac OS Extended (Case-sensitive, Journaled)**
 - 16 GB RAM
   - The build might work with less but it will certainly test your patience
 - Android Phone with unlocked bootloader
@@ -22,8 +22,8 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
 
 1. Obtain and configure the AOSP source code
 - Download Google's **repo** utility following [these instructions](https://source.android.com/setup/build/downloading#installing-repo)
-- Choose the <Android branch> you want to build from [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds), e.g., android-4.0.1_r1
-- Choose the <device build> you want to build from [this table](https://source.android.com/setup/build/running#selecting-device-build), e.g., aosp_blueline-userdebug
+- Choose the *Android branch* you want to build from [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds), e.g., android-4.0.1_r1
+- Choose the *device build* you want to build from [this table](https://source.android.com/setup/build/running#selecting-device-build), e.g., aosp_blueline-userdebug
     - **Note: most likely you will want to user the "-userdebug" extension as it enables developer features by default and is required by some of the next steps**
 - Run:
 	repo init -u https://android.googlesource.com/platform/manifest -b <Android branch>
@@ -40,8 +40,11 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
   - **sepolicy_tests** failure:
     - Quick fix which worked for my needs: **make SELINUX_IGNORE_NEVERALLOWS=true -j14**
     - You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
-
-  - **
+  - **sha256sum not found**: brew install coreutils
+  - **UTF-8 encoding**: export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+    - See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
+  - **ld: symbol(s) not found for architecture i386**: your MacOS SDK is too recent. Select the SDK that is supported by your AOSP build
+  - **ERROR: Couldn't create a device interface iterator**: your fastboot is outdated for MacOS (probably because it's using the one you built with AOSP). [Download the latest fastboot and adb](https://android.stackexchange.com/questions/209725/fastboot-devices-command-doesnt-work-after-macos-high-sierra-10-14-4-upgrade) and use these
 4. Flash the device
 5. Install APKs
 
