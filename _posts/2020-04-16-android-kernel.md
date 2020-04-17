@@ -33,3 +33,8 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
 # Embedding the kernel into AOSP
 
 # The Silver Bullet (When things go wrong)
+
+1. Boot into fastboot bootloader menu (press power and volume down for a few seconds)
+2. Download and unzip factory image from here
+3. Run flash-all.sh. Note: be patient or erase system, data and cache using TWRP and run the flash command after that
+4. Optional: To re-install the userdebug image, check it out using lunch, build it within AOSP for your target device and flash it
