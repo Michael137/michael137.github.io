@@ -39,7 +39,8 @@ lunch aosp_blueline-userdebug
 - Run:
 	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
-  		- **sepolicy_tests** failure:
+
+		- **sepolicy_tests** failure:
     		- Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
     		- You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
  		- **sha256sum not found**: brew install coreutils
@@ -58,8 +59,10 @@ lunch aosp_blueline-userdebug
 
 4. Flash the device
 - If you have quit the terminal you built AOSP in re-run the `build/envsetup.sh` and `lunch ...` commands
+- Reboot into the bootloader: `adb reboot-bootloader`
 - Run: `fastboot flashall -w`
 5. Install APKs
+
 
 # Kernel
 
