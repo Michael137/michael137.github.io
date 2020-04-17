@@ -82,6 +82,7 @@ adb shell
 		- `adb reboot`
 	- **Troubleshooting**: For Android 10 you can download the Google Services Framework (GSF), Play Services (GMS) and [Phonesky](https://androidforums.com/threads/what-exactly-is-phonesky-apk.755972/) APKs and install them to the directories above. For Android 10 (i.e., not Android Pie), install the GMS APK to /system/priv-app/GmsCore/GmsCore.apk. Then add the necessary whitelist permissions as outlined above.
 			- See [this SO post](https://android.stackexchange.com/questions/209781/install-google-play-services-without-google-play-store) and [this forum post](https://www.element14.com/community/community/designcenter/single-board-computers/riotboard/blog/2014/05/14/installing-google-play-services-and-google-play-store-on-riotboard) for more info on these APKs
+- (For **Chrome**): Download and [install](https://stackoverflow.com/questions/7076240/install-an-apk-file-from-command-prompt) the Chrome browser apk
 
 # Kernel
 
