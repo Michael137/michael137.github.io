@@ -31,3 +31,5 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
 # Kernel
 
 # Embedding the kernel
+
+# The Silver Bullet (When things go wrong)
