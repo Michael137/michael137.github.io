@@ -120,9 +120,9 @@ Prefixing is the operation that will allow us to introduce new transitions into 
 - For some label $$\alpha$$ the prefix $$\alpha T = (S', i', L', \mathit{Tran}')$$
 
 where
-* $$S' = { { s } }$$
+* $$S' = \{ \{ s \} | s \in S \} \cup \{ \varnothing \}$$
 * $$i' = \varnothing$$
-* $$L' = L \cup { a }$$
+* $$L' = L \cup \{ a \}$$
 
 # Sources
 [1] [Models for Concurrency - Glynn Winskel and Mogens Nielsen](https://dl.acm.org/doi/10.5555/218623.218630)
