@@ -41,9 +41,13 @@ lunch aosp_blueline-userdebug
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
 
 		- **sepolicy_tests** failure:
+
     		- Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
+
     		- You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
+
  		- **sha256sum not found**: brew install coreutils
+
 		- **UTF-8 encoding**: export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
 		- See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
   		- **ld: symbol(s) not found for architecture i386**: your MacOS SDK is too recent. Select the SDK that is supported by your AOSP build
