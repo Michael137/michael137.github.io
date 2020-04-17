@@ -24,7 +24,7 @@ The snpe_bench.py script does nothing more then:
 The **snpe-net-run** is less magical than it might at first seem. It is essentially just an extension of the [example C++ application from the SNPE SDK](https://developer.qualcomm.com/docs/snpe/cplus_plus_tutorial.html). It loads and executes a model on the device using SNPE's C++ API. To enable the profiling that snpe_bench.py outputs simply add a call to [setProfilingLevel()](https://developer.qualcomm.com/docs/snpe/group__c__plus__plus__apis.html#ae3838f4fe268646cac5660b3418cdd2c) when creating the "SNPEBuilder" object in your application.
 
 Example (shortened outtake from the NativeCpp example in the SNPE SDK):
-`
+
 	...
     std::unique_ptr<zdl::SNPE::SNPE> snpe;
     zdl::SNPE::SNPEBuilder snpeBuilder(container.get());
