@@ -20,7 +20,7 @@ Below steps are largely taken from the official [Android Docs](https://source.an
 # AOSP
 The Android Open Source Project (AOSP) contains all that's necessary to boot an operational Android phone equipped with a basic set of apps. It comes with a default boot image which you can replace with your custom built of a device specific kernel. Below are the steps to build it.
 
-1. Obtain the source
+1. Obtain and configure the AOSP source code
 - Download Google's **repo** utility following [these instructions](https://source.android.com/setup/build/downloading#installing-repo)
 - Choose the <Android branch> you want to build from [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds), e.g., android-4.0.1_r1
 - Choose the <device build> you want to build from [this table](https://source.android.com/setup/build/running#selecting-device-build), e.g., aosp_blueline-userdebug
@@ -31,7 +31,17 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
   	build/envsetup.sh
   	lunch <device build>
 2. Extract Vendor Binaries
-3. Build AOSP
+- The steps outlined in the [Android Docs](https://source.android.com/setup/build/downloading#obtaining-proprietary-binaries) should suffice
+- For Pixel devices obtain the binaries [here](https://developers.google.com/android/drivers). Make sure you download both the Google **and** the Qualcomm drivers and run the extraction script at the root of your AOSP directory
+3. Compile
+- Run:
+	make -j14
+- **Troubleshooting** -- Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
+  - **sepolicy_tests** failure:
+    - Quick fix which worked for my needs: **make SELINUX_IGNORE_NEVERALLOWS=true -j14**
+    - You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
+
+  - **
 4. Flash the device
 5. Install APKs
 
