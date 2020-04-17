@@ -72,11 +72,13 @@ adb remount
 adb shell mount -o rw,system /;
 ~~~
 		- Once installed, if the phone enters a bootloop this is likely due to whitelisting issues. You will have to add the neccessary permissions to the **/etc/permissions/privapp-permissions-blueline** file. To get the package name and permissions to add follow the [Android docs](https://source.android.com/devices/tech/config/perms-whitelist) on this topic. In short you have do the following:
+~~~bash
             adb pull /system/build.prop
-            Edit build.prop s.t. ro.control_privapp_permissions=log
+            vim build.prop # edit ro.control_privapp_permissions=log
             adb push build.prop /system
             adb reboot
             adb shell
+~~~
                 Search the logcat for the string "Privileged permission". Now add a permissions whitelist file for your device into /etc/permissions. E.g., for Pixel 3 blueline it is /etc/permissions/privapp-permissions-blueline
             adb reboot
     Troubleshooting: For Android 10 you can download the Google Services Framework (GSF), Play Services (GMS) and Phonesky APKs and install them to the directories above. For Android 10 (i.e., not Android Pie), install the GMS APK to /system/priv-app/GmsCore/GmsCore.apk. Then add the necessary whitelist permissions as outlined above.
