@@ -1,6 +1,6 @@
 ---
 layout: post
-published: true
+published: false
 title: Asynchronous Transition Systems
 date: '2020-03-08'
 ---
