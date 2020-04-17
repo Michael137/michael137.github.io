@@ -128,7 +128,6 @@ endif
   - `grep <your added feature> defconfig` should still show the additions you are interested in
 7. Run `build/build.sh` from the root of the overall msm build repo (not necessarily the kernel source)
 
-
 # The Silver Bullet (When things go wrong)
 
 1. Boot into fastboot bootloader menu (press power and volume down for a few seconds)
