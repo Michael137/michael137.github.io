@@ -117,13 +117,13 @@ Sums in process calculi specify the combination of several processes  into a sin
 **<u>Definition 10</u>**: Prefixing
 Prefixing is the operation that will allow us to introduce new transitions into an expression. Informally to takes some transition system to a new transition system that behaves identically to the original once an additional action took place.
 
-* For some label $$\alpha$$ the prefix $$\alpha T = (S', i', L', \mathit{Tran}')$$
+For some label $$\alpha$$ the prefix $$\alpha T = (S', i', L', \mathit{Tran}')$$
 
 where
-  * $$S' = \{ \{ s \} | s \in S \} \cup \{ \varnothing \}$$
-  * $$i' = \varnothing$$
-  * $$L' = L \cup \{ a \}$$
-  * $$\mathit{Tran}' = \{ (\{ s \}), b, \{ s' \}) | (s,b,s') \in \mathit{Tran} \} \cup \{(\varnothing, a, \{ i \})\}
+  - $$S' = \{ \{ s \} | s \in S \} \cup \{ \varnothing \}$$
+  - $$i' = \varnothing$$
+  - $$L' = L \cup \{ a \}$$
+  - $$\mathit{Tran}' = \{ (\{ s \}), b, \{ s' \}) | (s,b,s') \in \mathit{Tran} \} \cup \{ (\varnothing, a, \{ i \}) \}
 
 # Sources
 [1] [Models for Concurrency - Glynn Winskel and Mogens Nielsen](https://dl.acm.org/doi/10.5555/218623.218630)
