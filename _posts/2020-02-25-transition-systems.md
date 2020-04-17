@@ -123,7 +123,7 @@ where
   - $$S' = \{ \{ s \} | s \in S \} \cup \{ \varnothing \}$$
   - $$i' = \varnothing$$
   - $$L' = L \cup \{ a \}$$
-  - $$\mathit{Tran}' = \{ (\{ s \}), b, \{ s' \}) | (s,b,s') \in \mathit{Tran} \} \cup \{ (\varnothing, a, \{ i \}) \}
+  - $$\mathit{Tran}' = \{ (\{ s \}), b, \{ s' \}) | (s,b,s') \in \mathit{Tran} \} \cup \{ (\varnothing, a, \{ i \}) \}$$
 
 # Sources
 [1] [Models for Concurrency - Glynn Winskel and Mogens Nielsen](https://dl.acm.org/doi/10.5555/218623.218630)
