@@ -11,6 +11,8 @@ Transition systems give a convienent model for reasoning about inifite-state sys
 
 Below is a summary of the definitions of transitions systems found in Winskel and Nielsen [1] together with their categorical implications.
 
+This marks the start of a (lengthy) series in which I hope to survey the history of concurrency theory up to the state-of-the-art and convey it's impact on various fields from distributed systems to hardware (producing some artifacts along the way).
+
 # Formalisms
 ## Definitions
 
@@ -113,6 +115,12 @@ Sums in process calculi specify the combination of several processes  into a sin
   		\exists (s, \alpha, s') \in \mathit{Tran_1}. t = (\mathit{in_1}(s), j_{1}(\alpha), \mathit{in_1}(s'))$$
 
 **<u>Definition 10</u>**: Prefixing
+Prefixing is the operation that will allow us to introduce new transitions into an expression. Informally to takes some transition system to a new transition system that behaves identically to the original once an additional action took place.
+
+- For some label $$\alpha$$ the prefix $$\alpha T = (S', i', L', \mathit{Tran}')$$
+
+where
+* $$S' = {{s} | s \in S} \Cup {\empty}}$$
 
 # Sources
 [1] [Models for Concurrency - Glynn Winskel and Mogens Nielsen](https://dl.acm.org/doi/10.5555/218623.218630)
