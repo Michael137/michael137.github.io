@@ -108,7 +108,7 @@ url-pretty: "https://namin.seas.harvard.edu/people/michael-buch"
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-disqus: "disqus_8AiUrVFdo9"
+# disqus: "<disqus shortname>"
 
 # If you want to use JustComments fill with the API Key
 #just-comments: "ABCD-EFGH-IJKL"
