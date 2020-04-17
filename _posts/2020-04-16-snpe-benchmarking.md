@@ -12,7 +12,7 @@ Qualcomm equipped their Snapdragon Neural Processing Engine SDK ([SNPE](https://
 
 ![SNPE_OUTPUT_EXAMPLE](/img/snpe_benchmark_output_example.png)
 
-These results are incredibly useful. However, a user does not always have the freedom to pass his model execution through the snpe_bench.py script. Especially if the model is embedded in an application. In the rest of this writeup I show how to get the same fine-grained profiling information in your own application.
+These results are incredibly useful. However, a user does not always have the freedom to pass his model execution through the snpe_bench.py script, especially if the model is embedded in an application. In the rest of this writeup I show how to get the same fine-grained profiling information in your own application.
 
 # Solution
 
