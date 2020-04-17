@@ -63,15 +63,15 @@ lunch aosp_blueline-userdebug
 - Run: `fastboot flashall -w`
 5. Install APKs (e.g., Play Store, Chrome, etc.)
 - Follow [this SO post](https://stackoverflow.com/questions/41695566/install-google-apps-on-aosp-build/41818710#41818710)
-      - In the above guide, PrebuiltGmsCore is renamed PrebuiltGmsCorePi in the Android 9 build
-      - To be able to push files run:
+		- In the above guide, PrebuiltGmsCore is renamed PrebuiltGmsCorePi in the Android 9 build
+		- To be able to push files run:
 ~~~bash
 adb disable-verity
 adb root
 adb remount
 adb shell mount -o rw,system /;
 ~~~
-        Once installed, if the phone enters a bootloop this is likely due to whitelisting issues. You will have to add the neccessary permissions to the /etc/permissions/privapp-permissions-blueline file. To get the package name and permissions to add follow the Android docs on this topic. In short you have do the following:
+		- Once installed, if the phone enters a bootloop this is likely due to whitelisting issues. You will have to add the neccessary permissions to the **/etc/permissions/privapp-permissions-blueline** file. To get the package name and permissions to add follow the [Android docs](https://source.android.com/devices/tech/config/perms-whitelist) on this topic. In short you have do the following:
             adb pull /system/build.prop
             Edit build.prop s.t. ro.control_privapp_permissions=log
             adb push build.prop /system
