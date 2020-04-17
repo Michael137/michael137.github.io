@@ -50,7 +50,7 @@ lunch aosp_blueline-userdebug
     					- **Symbol not found: _OBJC_IVAR_$_NSScroller._action**: xselect Xcode
     					- Alternatively you can also copy the SDK into the existing Xcode.app: Download from [here](https://github.com/phracker/MacOSX-SDKs/releases) and copy it to **/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs**
 		- **sed: illegal option -- z**: [see this fix](https://stackoverflow.com/a/46859893/3842406)
-        - **sepolicy_tests** failure: Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`. You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
+        - **sepolicy_tests** failure: Quick fix which worked for my needs was to use `make SELINUX_IGNORE_NEVERALLOWS=true -j14` to compile. You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
 - **Result**: the resulting images should be located in **$AOSP_ROOT/out/target/product/blueline**
 
 4. Flash the device
