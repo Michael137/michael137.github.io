@@ -92,5 +92,6 @@ adb shell
 
 1. Boot into fastboot bootloader menu (press power and volume down for a few seconds)
 2. Download and unzip factory image from [here](https://developers.google.com/android/images)
-3. Run flash-all.sh. Note: be patient or erase system, data and cache using TWRP and run the flash command after that
-4. Optional: To re-install the userdebug image, check it out using lunch, build it within AOSP for your target device and flash it
+3. Run `./flash-all.sh`
+	- Note: this will take some time if data wasn't wiped in advance
+4. Now go back to the custom build
