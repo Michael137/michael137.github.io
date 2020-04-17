@@ -21,8 +21,8 @@ Below steps are largely taken from the official [Android Docs](https://source.an
 The Android Open Source Project (AOSP) contains all that's necessary to boot an operational Android phone equipped with a basic set of apps. It comes with a default boot image which you can replace with your custom built of a device specific kernel. Below are the steps to build it.
 
 1. Obtain the source
-- 
-
+- Download Google's **repo** utility following [these instructions](https://source.android.com/setup/build/downloading#installing-repo)
+- repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
 2. Extract Vendor Binaries
 3. Build AOSP
 4. Flash the device
