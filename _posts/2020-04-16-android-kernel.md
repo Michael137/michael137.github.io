@@ -73,11 +73,11 @@ adb shell mount -o rw,system /;
 ~~~
 		- Once installed, if the phone enters a bootloop this is likely due to whitelisting issues. You will have to add the neccessary permissions to the **/etc/permissions/privapp-permissions-blueline** file. To get the package name and permissions to add follow the [Android docs](https://source.android.com/devices/tech/config/perms-whitelist) on this topic. In short you have do the following:
 ~~~bash
-            adb pull /system/build.prop
-            vim build.prop # edit ro.control_privapp_permissions=log
-            adb push build.prop /system
-            adb reboot
-            adb shell
+adb pull /system/build.prop
+vim build.prop # edit ro.control_privapp_permissions=log
+adb push build.prop /system
+adb reboot
+adb shell
 ~~~
                 Search the logcat for the string "Privileged permission". Now add a permissions whitelist file for your device into /etc/permissions. E.g., for Pixel 3 blueline it is /etc/permissions/privapp-permissions-blueline
             adb reboot
