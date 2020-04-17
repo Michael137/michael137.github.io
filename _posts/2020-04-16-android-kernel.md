@@ -46,6 +46,7 @@ lunch aosp_blueline-userdebug
   		- **Could not find a supported Mac SDK**: see [this SO post](https://stackoverflow.com/questions/50760701/could-not-find-a-supported-mac-sdk-10-10-10-11-10-12-10-13) for more details. You can download an old SDK by following [these instructions](https://roadfiresoftware.com/2017/09/how-to-install-multiple-versions-of-xcode-at-the-same-time/). Once you installed a new SDK make sure `xcodebuild -showsdks` returns a SDK compatible with the AOSP build. Alternatively you can also copy the SDK into the existing Xcode.app: Download from [here](https://github.com/phracker/MacOSX-SDKs/releases) and copy it to */Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs*
         - **Symbol not found: OBJC_IVAR_$_NSScroller._action**: `xselect Xcode`
 		- **sed: illegal option -- z**: [see this fix](https://stackoverflow.com/a/46859893/3842406)
+ 		- **Command sha256sum not found**: `brew install coreutils`
 - **Result**: the resulting images should be located in **$AOSP_ROOT/out/target/product/blueline**
 
 4. Flash the device
