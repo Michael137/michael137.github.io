@@ -40,7 +40,6 @@ lunch aosp_blueline-userdebug
 	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
  		- **sha256sum not found**: brew install coreutils
-		- **sepolicy_tests** failure: Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`. You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
 		- **UTF-8 encoding**: `export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8`
 		- See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
   		- **ld: symbol(s) not found for architecture i386**: your MacOS SDK is too recent. Select the SDK that is supported by your AOSP build
@@ -53,6 +52,7 @@ lunch aosp_blueline-userdebug
     					- Alternatively you can also copy the SDK into the existing Xcode.app: Download from [here](https://github.com/phracker/MacOSX-SDKs/releases) and copy it to **/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs**
 		- **sed: illegal option -- z**: [see this fix](https://stackoverflow.com/a/46859893/3842406)
 - **Result**: the resulting images should be located in **$AOSP_ROOT/out/target/product/blueline**
+		- **sepolicy_tests** failure: Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`. You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
 
 4. Flash the device
 - If you have quit the terminal you built AOSP in re-run the `build/envsetup.sh` and `lunch ...` commands
