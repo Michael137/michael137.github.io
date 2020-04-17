@@ -94,7 +94,7 @@ Instructions are mostly from [Android docs](https://source.android.com/setup/bui
 8. `adb root`
 9. `adb remount -R`
 5. Copy the *.ko files from the kernel build output to `/vendor/lib/modules` on your device
-  - `adb push <KERNEL SOURCE>/group/brooks/mbuch/kernels/msm/out/android-msm-pixel-4.9/dist/*.ko /vendor/lib/modules`
+  - `adb push <KERNEL SOURCE>/out/android-msm-pixel-4.9/dist/*.ko /vendor/lib/modules`
 6. `adb reboot-bootloader`
 6. `fastboot flash boot out/target/product/blueline/boot.img`
 7. Reboot
