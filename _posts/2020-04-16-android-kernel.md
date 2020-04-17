@@ -79,6 +79,7 @@ adb push build.prop /system
 adb reboot
 adb shell
 ~~~
+
 		- Search the `adb shell logcat` output for the string "Privileged permission". Now add a permissions whitelist file for your device into /etc/permissions. E.g., for Pixel 3 blueline it is **/etc/permissions/privapp-permissions-blueline**
 		- `adb reboot`
 	- **Troubleshooting**: For Android 10 you can download the Google Services Framework (GSF), Play Services (GMS) and [Phonesky](https://androidforums.com/threads/what-exactly-is-phonesky-apk.755972/) APKs and install them to the directories above. For Android 10 (i.e., not Android Pie), install the GMS APK to /system/priv-app/GmsCore/GmsCore.apk. Then add the necessary whitelist permissions as outlined above.
