@@ -40,8 +40,10 @@ lunch aosp_blueline-userdebug
 	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
 		- **sepolicy_tests** failure:
-						- Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
-						- You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
+
+				- Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
+				- You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
+
  		- **sha256sum not found**: brew install coreutils
 		- **UTF-8 encoding**: `export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8`
 		- See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
@@ -82,6 +84,7 @@ adb shell
 		- Search the `adb shell logcat` output for the string "Privileged permission". Now add a permissions whitelist file for your device into /etc/permissions. E.g., for Pixel 3 blueline it is **/etc/permissions/privapp-permissions-blueline**
 		- `adb reboot`
 	- **Troubleshooting**: For Android 10 you can download the Google Services Framework (GSF), Play Services (GMS) and [Phonesky](https://androidforums.com/threads/what-exactly-is-phonesky-apk.755972/) APKs and install them to the directories above. For Android 10 (i.e., not Android Pie), install the GMS APK to /system/priv-app/GmsCore/GmsCore.apk. Then add the necessary whitelist permissions as outlined above.
+
 					- See [this SO post](https://android.stackexchange.com/questions/209781/install-google-play-services-without-google-play-store) and [this forum post](https://www.element14.com/community/community/designcenter/single-board-computers/riotboard/blog/2014/05/14/installing-google-play-services-and-google-play-store-on-riotboard) for more info on these APKs
 
 - (For **Chrome**): Download and [install](https://stackoverflow.com/questions/7076240/install-an-apk-file-from-command-prompt) the Chrome browser APK
