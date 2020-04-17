@@ -39,6 +39,7 @@ lunch aosp_blueline-userdebug
 - Run:
 	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
+
  		- **sha256sum not found**: brew install coreutils
 		- **UTF-8 encoding**: `export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8`
 		- See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
