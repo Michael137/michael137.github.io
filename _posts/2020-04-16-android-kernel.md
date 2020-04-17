@@ -53,8 +53,7 @@ lunch aosp_blueline-userdebug
     					- Make sure **xcodebuild -showsdks** returns a SDK compatible with the AOSP build
     					- **Symbol not found: _OBJC_IVAR_$_NSScroller._action**: xselect Xcode
     					- Alternatively you can also copy the SDK into the existing Xcode.app: Download from [here](https://github.com/phracker/MacOSX-SDKs/releases) and copy it to **/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs**
-
-**Result**: the resulting images should be located in **$AOSP_ROOT/out/target/product/blueline**
+- **Result**: the resulting images should be located in **$AOSP_ROOT/out/target/product/blueline**
 
 4. Flash the device
 - If you have quit the terminal you built AOSP in re-run the `build/envsetup.sh` and `lunch ...` commands
