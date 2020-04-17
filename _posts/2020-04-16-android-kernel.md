@@ -34,7 +34,6 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
   	build/envsetup.sh
 
   	lunch aosp_blueline-userdebug
-    `
 2. Extract Vendor Binaries
 - The steps outlined in the [Android Docs](https://source.android.com/setup/build/downloading#obtaining-proprietary-binaries) should suffice
 - For Pixel devices obtain the binaries [here](https://developers.google.com/android/drivers). Make sure you download both the Google **and** the Qualcomm drivers and run the extraction script at the root of your AOSP directory
