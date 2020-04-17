@@ -115,11 +115,12 @@ For modern Kernels the defconfig can be specified in the top-level `build.config
 4. Comment out the `POST_DEFCONFIG_CMDS` line in `build.config`
   - These perform `check_defconfig` and `update_nocfig_config` which will prevent you from customizing the defconfig
 5. Comment out following chunk of the `prepare3` target in the main kernel makefile (e.g., `msm/private/msm-google/Makefile`):
-`ifneq ($(KBUILD_SRC),)
+~~~bash
+ifneq ($(KBUILD_SRC),)
 ...
 ... $(srctree) is not clean, please run 'make mkrpoper'
 endif
-`
+~~~
   - By default the build does not allow modifications to the source. By commenting out the above check the compilation should now go through with your custom defconfig
 6. Follow [these steps](https://unix.stackexchange.com/q/421479) to save the custom defconfig configuration. These steps are outlined below (run from kernel source root, i.e., `msm/private/msm-google`)
   - `make ARCH=arm64 <custom name>_defconfig`
