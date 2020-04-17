@@ -38,10 +38,10 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
 - For Pixel devices obtain the binaries [here](https://developers.google.com/android/drivers). Make sure you download both the Google **and** the Qualcomm drivers and run the extraction script at the root of your AOSP directory
 3. Compile
 - Run:
-	make -j14
+	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
   - **sepolicy_tests** failure:
-    - Quick fix which worked for my needs: **make SELINUX_IGNORE_NEVERALLOWS=true -j14**
+    - Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
     - You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
   - **sha256sum not found**: brew install coreutils
   - **UTF-8 encoding**: export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
