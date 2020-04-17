@@ -85,10 +85,9 @@ adb shell
 			- See [this SO post](https://android.stackexchange.com/questions/209781/install-google-play-services-without-google-play-store) and [this forum post](https://www.element14.com/community/community/designcenter/single-board-computers/riotboard/blog/2014/05/14/installing-google-play-services-and-google-play-store-on-riotboard) for more info on these APKs
 - (For **Chrome**): Download and [install](https://stackoverflow.com/questions/7076240/install-an-apk-file-from-command-prompt) the Chrome browser APK
 
-# Kernel
+# Customizing, Building, Embedding and Flashing Kernel
 The kernel and AOSP projects are separate. To change the kernel of an AOSP build one has to check out and build the kernel image separately, embed it into the AOSP tree, rebuild the boot image and reflash the device.
 
-### Modern Kernel
 Instructions are mostly from [Android docs](https://source.android.com/setup/build/building-kernels) to build and embed the kernel in the AOSP tree
 
 1. Build kernel
@@ -104,9 +103,31 @@ Instructions are mostly from [Android docs](https://source.android.com/setup/bui
 7. Reboot
 8. Check kernel version in adb shell using `uname -a` or `cat /proc/version`
 
-(Above instructions were taken from [this thread on a broken touchscreen driver](https://groups.google.com/forum/#!topic/android-building/ou630PviyDc))
+(Above instructions were partly taken from [this thread on a broken touchscreen driver](https://groups.google.com/forum/#!topic/android-building/ou630PviyDc))
 
-# Embedding the kernel into AOSP
+## Customizing Kernel Configuration
+For modern Kernels the defconfig can be specified in the top-level `build.config` file. The custom defconfig file should be called `<custom name>_defconfig`.
+1. Navigate to `private/msm-google/arch/arm64/configs/`
+2. `cp <defconfig template> <custom name>_defconfig`
+  - For Pixel 3 Android 10 blueline the config is **b1c1_defconfig**
+3. Make any changes to your custom config
+4. Comment out the `POST_DEFCONFIG_CMDS` line in `build.config`
+  - These perform `check_defconfig` and `update_nocfig_config` which will prevent you from customizing the defconfig
+5. Comment out following chunk of the `prepare3` target in the main kernel makefile (e.g., `msm/private/msm-google/Makefile`):
+`ifneq ($(KBUILD_SRC),)
+...
+... $(srctree) is not clean, please run 'make mkrpoper'
+endif
+`
+  - By default the build does not allow modifications to the source. By commenting out the above check the compilation should now go through with your custom defconfig
+6. Follow [these steps](https://unix.stackexchange.com/q/421479) to save the custom defconfig configuration. These steps are outlined below (run from kernel source root, i.e., `msm/private/msm-google`)
+  - `make ARCH=arm64 <custom name>_defconfig`
+  - `diff -u .config ./arch/arm64/configs/<custom name>_defconfig | diffstat` should show your additions and potentially some more added by the build system
+  - `grep <your added feature> .config` should show your features added
+  - make ARCH=arm64 savedefconfig
+  - `grep <your added feature> defconfig` should still show the additions you are interested in
+7. Run `build/build.sh` from the root of the overall msm build repo (not necessarily the kernel source)
+
 
 # The Silver Bullet (When things go wrong)
 
