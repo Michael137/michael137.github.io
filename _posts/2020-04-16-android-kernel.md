@@ -26,13 +26,14 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
 - Choose the *device build* you want to build from [this table](https://source.android.com/setup/build/running#selecting-device-build), e.g., aosp_blueline-userdebug
   - **Note: most likely you will want to user the "userdebug" extension as it enables developer features by default and is required by some of the next steps**
 - Run:
-	`repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1`
 
-  	`repo sync -qc -j12`
+	repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
 
-  	`build/envsetup.sh`
+  	repo sync -qc -j12
 
-  	`lunch aosp_blueline-userdebug`
+  	build/envsetup.sh
+
+  	lunch aosp_blueline-userdebug
 
 2. Extract Vendor Binaries
 - The steps outlined in the [Android Docs](https://source.android.com/setup/build/downloading#obtaining-proprietary-binaries) should suffice
