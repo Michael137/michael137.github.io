@@ -45,6 +45,7 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
     - See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
   - **ld: symbol(s) not found for architecture i386**: your MacOS SDK is too recent. Select the SDK that is supported by your AOSP build
   - **ERROR: Couldn't create a device interface iterator**: your fastboot is outdated for MacOS (probably because it's using the one you built with AOSP). [Download the latest fastboot and adb](https://android.stackexchange.com/questions/209725/fastboot-devices-command-doesnt-work-after-macos-high-sierra-10-14-4-upgrade) and use these
+  - **Fastboot operation not supported**: Flash the factory image for the operating system you are replacing and retry the fastboot flashall
 4. Flash the device
 5. Install APKs
 
