@@ -24,7 +24,7 @@ The Android Open Source Project (AOSP) contains all that's necessary to boot an 
 - Download Google's **repo** utility following [these instructions](https://source.android.com/setup/build/downloading#installing-repo)
 - Choose the *Android branch* you want to build from [here](https://source.android.com/setup/start/build-numbers#source-code-tags-and-builds), e.g., android-4.0.1_r1
 - Choose the *device build* you want to build from [this table](https://source.android.com/setup/build/running#selecting-device-build), e.g., aosp_blueline-userdebug
-    - **Note: most likely you will want to user the "-userdebug" extension as it enables developer features by default and is required by some of the next steps**
+  - **Note: most likely you will want to user the "userdebug" extension as it enables developer features by default and is required by some of the next steps**
 - Run:
 	repo init -u https://android.googlesource.com/platform/manifest -b android-4.0.1_r1
   	repo sync -qc -j12
