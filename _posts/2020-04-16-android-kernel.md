@@ -40,8 +40,8 @@ lunch aosp_blueline-userdebug
 	`make -j14`
 - **(Troubleshooting)** Inevitably you will run into compilation errors. Check the following steps to see if one of my fixes applies:
 		- **sepolicy_tests** failure:
-						- Quick fix which worked for my needs:
-						- You can also apply the patch from
+						- Quick fix which worked for my needs: `make SELINUX_IGNORE_NEVERALLOWS=true -j14`
+						- You can also apply the patch from [this promising Google Groups thread](https://groups.google.com/forum/?fromgroups#!topic/android-building/_VyLXSosgoo)
  		- **sha256sum not found**: brew install coreutils
 		- **UTF-8 encoding**: `export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8`
 		- See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
@@ -53,6 +53,7 @@ lunch aosp_blueline-userdebug
     					- Make sure **xcodebuild -showsdks** returns a SDK compatible with the AOSP build
     					- **Symbol not found: _OBJC_IVAR_$_NSScroller._action**: xselect Xcode
     					- Alternatively you can also copy the SDK into the existing Xcode.app: Download from [here](https://github.com/phracker/MacOSX-SDKs/releases) and copy it to **/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs**
+		- **sed: illegal option -- z:**: [see this fix](https://stackoverflow.com/a/46859893/3842406)
 - **Result**: the resulting images should be located in **$AOSP_ROOT/out/target/product/blueline**
 
 4. Flash the device
