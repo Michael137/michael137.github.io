@@ -25,7 +25,7 @@ The **snpe-net-run** is less magical than it might at first seem. It is essentia
 
 Example (shortened outtake from the NativeCpp example in the SNPE SDK):
 `
-...
+	...
     std::unique_ptr<zdl::SNPE::SNPE> snpe;
     zdl::SNPE::SNPEBuilder snpeBuilder(container.get());
 
@@ -33,6 +33,5 @@ Example (shortened outtake from the NativeCpp example in the SNPE SDK):
 	auto prof_level = zdl::DlSystem::ProfilingLevel_t(DETAILED);
     snpe = snpeBuilder.setProfilingLevel(prof_level).build();
     return snpe;
-`
 
 The application will then generate a "SNPEDiag.log" file (or similar) in the output directory. This log file can be viewed/converted to CSV using the [snpe-diagview](https://developer.qualcomm.com/docs/snpe/tools.html#tools_snpe-diagview) utility.
