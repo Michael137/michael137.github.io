@@ -43,7 +43,7 @@ lunch aosp_blueline-userdebug
 						- Quick fix which worked for my needs:
 						- You can also apply the patch from
  		- **sha256sum not found**: brew install coreutils
-		- **UTF-8 encoding**: export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8
+		- **UTF-8 encoding**: `export JAVA_TOOL_OPTIONS=-Dfile.encoding=UTF8`
 		- See [this SO post](https://stackoverflow.com/questions/26067350/unmappable-character-for-encoding-ascii-but-my-files-are-in-utf-8)
   		- **ld: symbol(s) not found for architecture i386**: your MacOS SDK is too recent. Select the SDK that is supported by your AOSP build
   		- **ERROR: Couldn't create a device interface iterator**: your fastboot is outdated for MacOS (probably because it's using the one you built with AOSP). [Download the latest fastboot and adb](https://android.stackexchange.com/questions/209725/fastboot-devices-command-doesnt-work-after-macos-high-sierra-10-14-4-upgrade) and use these
