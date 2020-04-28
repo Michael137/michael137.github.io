@@ -5,7 +5,7 @@ title: Economical Computing
 subtitle: Sharing Economy of Compute
 date: '2020-04-27'
 ---
-The ASPLOS *Wild and Crazy Ideas* (WACI) annually collates ambitious, yet possibly "reasonable", projects that span hardware, systems and programming languages research. This is my colleague Yeongil's and my entry for 2020's WACI that we were supposed to present in Zurich:
+The ASPLOS *Wild and Crazy Ideas* (WACI) annually collates ambitious, yet possibly "reasonable", projects that span hardware, systems and programming languages research. This is my colleague Yeongil's and my entry for [2020's WACI that we were supposed to present in Zurich](https://www.youtube.com/watch?v=8V1DyzX8JMA):
 
 ```
 Exchange of goods has been the driving force of our modern economy. Increasingly does society turn to the model of a sharing economy. Surpluses of resources are shared to prevent waste, for instance, cars (Uber), accommodation (AirBnB) or food (Olio). Why is it then that the same is not done with compute resources?
