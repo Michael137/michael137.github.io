@@ -148,6 +148,8 @@ msm/
 - Check using: `adb shell lsmod`
 - Remove using: `adb shell rmmod my_module.ko`
 
+See [this SO post](https://stackoverflow.com/questions/6282669/how-do-you-create-a-loadable-kernel-module-for-android) for more info on writing drivers
+
 # The Silver Bullet (When things go wrong)
 
 1. Boot into fastboot bootloader menu (press power and volume down for a few seconds)
