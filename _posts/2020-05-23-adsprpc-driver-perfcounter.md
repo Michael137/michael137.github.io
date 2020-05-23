@@ -20,3 +20,4 @@ The Linux [adsprpc driver](https://android.googlesource.com/kernel/msm/+/android
   8.  `PERF_INVARGS` : inv_args or inv_args_pre calls
   9.  `PERF_INVOKE`  : complete fastrpc_internal_invoke call
   10. `PERF_KEY_MAX` : bookkeeping (denotes last perf key entry)
+- Each of the above enum entries is actually an offset used to look up and store performance counters in a `struct fastrpc_perf`
