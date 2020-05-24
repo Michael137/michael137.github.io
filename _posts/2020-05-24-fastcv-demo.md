@@ -73,7 +73,16 @@ $HOME/Android/android-fastcv/
 To avoid more errors later follow this [SO answer](https://stackoverflow.com/a/44916103/3842406): download `build-tools/` version 25.x.x Android Studio's SDK Manager and remove all other version from the newly created Eclipse Android SDK `build-tools/` directory.
 
 ## FastCV SDK
-download fastcv + copy files
+Copy the FastCV headers and static library to the Android NDK.
+
+**Note: make sure you don't copy the library or header anywhere else in the NDK apart from `android-8/` to prevent confusing build system errors
+
+```
+mkdir $HOME/Android/android-ndk-r6/platforms/android-8/arch-arm/usr/include/fastcv
+cp $HOME/Android/android-fastcv/inc/fastcv.h $HOME/Android/android-ndk-r6/platforms/android-8/arch-arm/usr/include/fastcv/
+cp $HOME/Android/android-fastcv/lib/Android/lib32/libfastcv.a $HOME/Android/android-ndk-r6/platforms/android-8/arch-arm/usr/lib
+```
+
 ## Import Projects
 set up projects android version
 default.properties
