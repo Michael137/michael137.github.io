@@ -56,7 +56,9 @@ You can find the location of your Java installtion using:
 ## ADT
 This step prevents the ADT error on Eclipse startup: **Failed to get the required ADT version number from the SDK**
 
-This is because Eclipse ADT and Android are both using the same SDK tools. Correct this by creating a new SDK directory for Eclipse eclusively alongside the original SDK. Follow this [SO answer](https://stackoverflow.com/a/48153498/3842406) to do this. You directory should look as follows:
+This is because Eclipse ADT and Android are both using the same SDK tools. Correct this by creating a new SDK directory for Eclipse eclusively alongside the original SDK. Follow this [SO answer](https://stackoverflow.com/a/48153498/3842406) to create a new Eclipse Android SDK directory that contains symlinks to all subdirectories of the original Android SDK apart from the `tools/` folder (which you have to download separately).
+
+You directory should look as follows:
 
 ```
 $HOME/Android/android-ndk-r6/
