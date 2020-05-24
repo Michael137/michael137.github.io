@@ -86,17 +86,24 @@ cp $HOME/Android/android-fastcv/inc/fastcv.h $HOME/Android/android-ndk-r6/platfo
 cp $HOME/Android/android-fastcv/lib/Android/lib32/libfastcv.a $HOME/Android/android-ndk-r6/platforms/android-8/arch-arm/usr/lib
 ```
 
-## Import, Compile and Install Projects
+## Import and Compile
 [Qualcomm's installation instructions](https://developer.qualcomm.com/software/fast-cv-sdk/sample-app) are mostly accurate.
 
 1. Import the Android project from existing code (pointing Eclipse to the FastCV SDK directory when prompted).
 2. Change the Android SDK path in **Project > Properties > Android** to API Level 8 and target *Android 2.2* (it will work even on Android 10)
 3. Disable **...abort if fatal errors are found** in **Window > Preferences > Lint Error Checking**
-4. 
+4. **IMPORTANT**: Add a `default.properties` file in the project root and add the single line:
+```target=android-8```
+5. Convert to CDT C++ Project as specified in the [Qualcomm docs](https://developer.qualcomm.com/software/fast-cv-sdk/sample-app)
+6. **Project > Clean... > Clean**
+7. **Project > Build All**
 
-default.properties
+## Install applications on device
+Contrary to what the Qualcomm docs say, the `bin/` directory doesn't necessarily contain an `*.apk` file which you need to transfer the application to your Android device.
 
-build project
-  (turn off lint if necessary)
-export signed apk
-adb install
+1. Right click your project
+2. Select **Android Tools > Export Signed Application Package**
+3. Create a keystore with any password in any location (you can reuse this whenever you export another application)
+4. If you chose `bin/` as your output directory in step 3 then you can install the `bin/<demo>.apk` to your connected device by:
+`adb install bin/<demo>.apk`
+5. The applications should be visible and runnable on your phone
