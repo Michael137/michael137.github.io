@@ -109,4 +109,18 @@ Contrary to what the Qualcomm docs say, the `bin/` directory doesn't necessarily
 5. The applications should be visible and runnable on your phone
 
 # loadjpeg
-There is a third demo application in the FastCV SDK called **loadjpeg**. However, it [does not work out-of-the-box](https://developer.qualcomm.com/forum/qdn-forums/software/fastcv-computer-vision-sdk/29814)
+There is a third demo application in the FastCV SDK called **loadjpeg**. However, it [does not work out-of-the-box](https://developer.qualcomm.com/forum/qdn-forums/software/fastcv-computer-vision-sdk/29814). Following steps fix the application:
+
+1. Add an *intent-filter* to the `AndroidManifest.xml`:
+```
+<intent-filter>
+	... original intent filters ...
+</intent-filter>
+<intent-filter>
+	<action android:name="android.intent.action.MAIN" />
+    <category android:name="android.intent.category.LAUNCHER" />
+</intent-filter>
+```
+
+2. Change all occurences of *fastcvsample* in `jni/Anroid.mk` to *loadjpeg* (as suggested [here](https://developer.qualcomm.com/forum/qdevnet-forums/computer-vision-fastcv/18122))
+3. 
