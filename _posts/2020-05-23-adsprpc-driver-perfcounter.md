@@ -35,7 +35,7 @@ The Linux *adsprpc* driver dictates communiction between CPU and DSP. Most of th
 - A user-space application can use the `FASTRPC_IOCTL_GETPERF` ioctl command to retrieve performance counters
   - It does essentially the same as `getpercounter` above but copies out some additional information about available performance counters to the user
 
-# Invocation
+# Usage
 An example program to retrieve information about DSP performance counters is as follows:
 ```c
 #include <fcntl.h>
