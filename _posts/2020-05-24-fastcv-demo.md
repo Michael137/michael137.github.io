@@ -73,7 +73,7 @@ $HOME/Android/android-fastcv/
 
 To avoid more errors later follow this [SO answer](https://stackoverflow.com/a/44916103/3842406): download `build-tools/` version 25.x.x Android Studio's SDK Manager and remove all other version from the newly created Eclipse Android SDK `build-tools/` directory.
 
-**IMPORTANT**: Point Eclipse to your new Android SDK in **Window > Preferences > Android > SDK Location**. Make sure you see Android 2.2 API Level 8 listed.
+**IMPORTANT**: Point Eclipse to your new Android SDK in **Window > Preferences > Android > SDK Location**. Make sure you see Android 2.2 API Level 8 in the list of available SDKs.
 
 ## FastCV SDK
 Copy the FastCV headers and static library to the Android NDK.
