@@ -46,7 +46,12 @@ export PATH=$HOME/Android/android-ndk-r6:$PATH
 export ANDROID_NDK_ROOT=$HOME/Android/android-ndk-r6
 ```
 ## Eclipse
-set eclipse's Java to correct version
+To prevent obscure errors later down the line make sure Eclipse uses JDK 8.
+
+Follow [these instructions](https://stackoverflow.com/a/50164402) (essentially just editing **eclipse.ini** and repointing the installed JREs setting)
+
+You can find the location of your Java installtion using:
+`update-alternatives --list java`
 ## ADT
 copy SDK (symlinks + set up correct build-tools and tools)
 ## FastCV SDK
