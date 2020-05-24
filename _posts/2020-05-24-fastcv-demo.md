@@ -78,7 +78,7 @@ To avoid more errors later follow this [SO answer](https://stackoverflow.com/a/4
 ## FastCV SDK
 Copy the FastCV headers and static library to the Android NDK.
 
-**Note: make sure you don't copy the library or header anywhere else in the NDK apart from `android-8/` to prevent confusing build system errors**
+**Note: make sure you don't copy the library or header anywhere else in the NDK apart from `android-8/` to prevent confusing build system errors
 
 ```
 mkdir $HOME/Android/android-ndk-r6/platforms/android-8/arch-arm/usr/include/fastcv
@@ -112,6 +112,7 @@ Contrary to what the Qualcomm docs say, the `bin/` directory doesn't necessarily
 There is a third demo application in the FastCV SDK called **loadjpeg**. However, it [does not work out-of-the-box](https://developer.qualcomm.com/forum/qdn-forums/software/fastcv-computer-vision-sdk/29814). Following steps fix the application:
 
 1. Add an *intent-filter* to the `AndroidManifest.xml`:
+
 ```
 <intent-filter>
 	... original intent filters ...
