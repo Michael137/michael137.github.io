@@ -123,4 +123,5 @@ There is a third demo application in the FastCV SDK called **loadjpeg**. However
 ```
 
 2. Change all occurences of *fastcvsample* in `jni/Anroid.mk` to *loadjpeg* (as suggested [here](https://developer.qualcomm.com/forum/qdevnet-forums/computer-vision-fastcv/18122))
-3. 
+3. Build and install the project
+4. You might run into permission issues after starting the application (run `adb shell logcat` to see this). In this case make [these additions](https://stackoverflow.com/a/41221852/3842406) to the `LoadJpeg.java`
