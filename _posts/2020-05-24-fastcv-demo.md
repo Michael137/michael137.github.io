@@ -113,7 +113,7 @@ There is a third demo application in the FastCV SDK called **loadjpeg**. However
 
 1. Add an *intent-filter* to the `AndroidManifest.xml`:
 
-```
+```xml
 <intent-filter>
 	... original intent filters ...
 </intent-filter>
