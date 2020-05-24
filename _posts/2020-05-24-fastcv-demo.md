@@ -29,5 +29,9 @@ set eclipse's Java to correct version
 set up projects android version
 copy SDK (symlinks + set up correct build-tools and tools)
 default.properties
+download fastcv + copy files
 
-We follow the 
+build project
+(turn off lint if necessary)
+export signed apk
+adb install
