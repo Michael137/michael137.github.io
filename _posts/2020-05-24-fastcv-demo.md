@@ -64,7 +64,7 @@ $HOME/Android/android-sdk/
     ...
     tools/
 $HOME/Android/android-sdk-eclipse/
-    <symlinks to android-sdk for all except tools/>
+    <symlinks to android-sdk for all subdirectories except tools/>
 $HOME/Android/android-fastcv/
 ```
 
