@@ -93,7 +93,7 @@ cp $HOME/Android/android-fastcv/lib/Android/lib32/libfastcv.a $HOME/Android/andr
 2. Change the Android SDK path in **Project > Properties > Android** to API Level 8 and target *Android 2.2* (it will work even on Android 10)
 3. Disable **...abort if fatal errors are found** in **Window > Preferences > Lint Error Checking**
 4. **IMPORTANT**: Add a `default.properties` file in the project root and add the single line:
-```target=android-8``` (see [this obscure thread](https://developer.qualcomm.com/forum/qdn-forums/add-advanced-features/computer-vision-fastcv/27256))
+```target=android-8``` (per [this obscure thread](https://developer.qualcomm.com/forum/qdn-forums/add-advanced-features/computer-vision-fastcv/27256))
 5. Convert to CDT C++ Project as specified in the [Qualcomm docs](https://developer.qualcomm.com/software/fast-cv-sdk/sample-app)
 6. **Project > Clean... > Clean**
 7. **Project > Build All**
