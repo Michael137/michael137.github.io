@@ -52,8 +52,22 @@ Follow [these instructions](https://stackoverflow.com/a/50164402) (essentially j
 
 You can find the location of your Java installtion using:
 `update-alternatives --list java`
+
 ## ADT
-copy SDK (symlinks + set up correct build-tools and tools)
+This step prevents the ADT error on Eclipse startup: **Failed to get the required ADT version number from the SDK**
+
+This is because Eclipse ADT and Android are both using the same SDK tools. Correct this by creating a new SDK directory for Eclipse eclusively alongside the original SDK. Follow this [SO answer](https://stackoverflow.com/a/48153498/3842406) to do this. You directory should look as follows:
+
+```
+$HOME/Android/android-ndk-r6/
+$HOME/Android/android-sdk/
+    ...
+    tools/
+$HOME/Android/android-sdk-eclipse/
+    <symlinks to android-sdk for all except tools/>
+$HOME/Android/android-fastcv/
+```
+
 ## FastCV SDK
 download fastcv + copy files
 ## Import Projects
