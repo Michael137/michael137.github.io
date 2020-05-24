@@ -70,6 +70,8 @@ $HOME/Android/android-sdk-eclipse/
 $HOME/Android/android-fastcv/
 ```
 
+To avoid more errors later follow this [SO answer](https://stackoverflow.com/a/44916103/3842406): download `build-tools/` version 25.x.x Android Studio's SDK Manager and remove all other version from the newly created Eclipse Android SDK `build-tools/` directory.
+
 ## FastCV SDK
 download fastcv + copy files
 ## Import Projects
