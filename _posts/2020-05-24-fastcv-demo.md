@@ -78,7 +78,7 @@ To avoid more errors later follow this [SO answer](https://stackoverflow.com/a/4
 ## FastCV SDK
 Copy the FastCV headers and static library to the Android NDK.
 
-**Note: make sure you don't copy the library or header anywhere else in the NDK apart from `android-8/` to prevent confusing build system errors
+**Note: make sure you don't copy the library or header anywhere else in the NDK apart from `android-8/` to prevent confusing build system errors**
 
 ```
 mkdir $HOME/Android/android-ndk-r6/platforms/android-8/arch-arm/usr/include/fastcv
