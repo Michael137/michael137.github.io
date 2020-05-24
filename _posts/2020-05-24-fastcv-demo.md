@@ -21,6 +21,14 @@ This is one of the rare instance where the IDE simplified the build process. Thu
   - [Other old versions](https://stackoverflow.com/a/28088215)
   - Place the Android NDK directory at the same level as the Android SDK directory
 - C/C++ Development Toolkit (CDT) (install it through Eclipse again; the latest version works)
+- Download the FastCV SDK and install it into the same directory where the Android SDK and NDK are located
+
+The final directory structure should look like:
+```
+android-ndk-r6/
+android-sdk/
+fastcv/
+```
 
 # Setup
 setup path
