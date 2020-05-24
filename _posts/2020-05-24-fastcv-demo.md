@@ -23,11 +23,11 @@ This is one of the rare instance where the IDE simplified the build process. Thu
 - C/C++ Development Toolkit (CDT) (install it through Eclipse again; the latest version works)
 - Download the FastCV SDK and install it into the same directory where the Android SDK and NDK are located
 
-The final directory structure should look like (modulo directory name):
+The final directory structure should look like (modulo directory names):
 ```
-android-ndk-r6/
-android-sdk/
-android-fastcv/
+$HOME/Android/android-ndk-r6/
+$HOME/Android/android-sdk/
+$HOME/Android/android-fastcv/
 ```
 
 # Setup
@@ -36,9 +36,12 @@ Do the following in the same session where you start Eclipse. Or add the lines t
 
 1. Add the SDK `platform-tools` and `tools` directories to your path:
 ```bash
-export 
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+export PATH=$HOME/Android/android-ndk-r6:$PATH
 ```
-setup NDK root
+2. Set the `ANDROID_NDK_ROOT` variable
 ## Eclipse
 set eclipse's Java to correct version
 ## ADT
