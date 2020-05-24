@@ -27,7 +27,7 @@ The final directory structure should look like (modulo directory name):
 ```
 android-ndk-r6/
 android-sdk/
-fastcv/
+android-fastcv/
 ```
 
 # Setup
