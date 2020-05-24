@@ -6,7 +6,7 @@ date: '2020-05-24'
 ---
 [Qualcomm's FastCV SDK](https://developer.qualcomm.com/software/fast-cv-sdk) promises hardware acceleration of computer vision applications, providing a slew of APIs for common signal processing tasks (e.g., filters) without ties to particular hardware.
 
-Personally I'm interested in the behaviour of hardware accelerated software on mobile systems; this makes FastCV seem like an excellent research platform. However, open-source applications that make use of the framework are far in between. Qualcomm ships two demo Android applications: *fastcvdemo* amd *fastcvcorner*. Below are the not-so-straightforward steps to build these applications on a Pixel 3 (despite the decade old official documentation).
+Personally I'm interested in the behaviour of hardware accelerated software on mobile systems; this makes FastCV seem like an excellent research platform. However, open-source applications that make use of the framework are far in between. Qualcomm ships two demo Android applications: *fastcvdemo* amd *fastcvcorner*. Below are the not-so-straightforward steps to build these applications on a Pixel 3 Android 10 (despite the decade old official documentation).
 
 # Requirements
 This is one of the rare instance where the IDE simplified the build process. Thus we'll be using Eclipse for Java, ADT and CDT on **Linux (Ubuntu 18.04)** to build the demo applicaitons. Other OSes are likely to be compatible with the below steps (Windows is the Qualcomm recommended OS).
@@ -73,6 +73,8 @@ $HOME/Android/android-fastcv/
 
 To avoid more errors later follow this [SO answer](https://stackoverflow.com/a/44916103/3842406): download `build-tools/` version 25.x.x Android Studio's SDK Manager and remove all other version from the newly created Eclipse Android SDK `build-tools/` directory.
 
+**IMPORTANT**: Point Eclipse to your new Android SDK in **Window > Preferences > Android > SDK Location**. Make sure you see Android 2.2 API Level 8 listed.
+
 ## FastCV SDK
 Copy the FastCV headers and static library to the Android NDK.
 
@@ -84,11 +86,16 @@ cp $HOME/Android/android-fastcv/inc/fastcv.h $HOME/Android/android-ndk-r6/platfo
 cp $HOME/Android/android-fastcv/lib/Android/lib32/libfastcv.a $HOME/Android/android-ndk-r6/platforms/android-8/arch-arm/usr/lib
 ```
 
-## Import Projects
-set up projects android version
+## Import, Compile and Install Projects
+[Qualcomm's installation instructions](https://developer.qualcomm.com/software/fast-cv-sdk/sample-app) are mostly accurate.
+
+1. Import the Android project from existing code (pointing Eclipse to the FastCV SDK directory when prompted).
+2. Change the Android SDK path in **Project > Properties > Android** to API Level 8 and target *Android 2.2* (it will work even on Android 10)
+3. Disable **...abort if fatal errors are found** in **Window > Preferences > Lint Error Checking**
+4. 
+
 default.properties
 
-# Compile and Install Applications
 build project
   (turn off lint if necessary)
 export signed apk
