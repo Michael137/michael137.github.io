@@ -32,7 +32,12 @@ android-fastcv/
 
 # Setup
 ## Environment Variables
-setup path
+Do the following in the same session where you start Eclipse. Or add the lines to your bashrc.
+
+1. Add the SDK `platform-tools` and `tools` directories to your path:
+```bash
+export 
+```
 setup NDK root
 ## Eclipse
 set eclipse's Java to correct version
