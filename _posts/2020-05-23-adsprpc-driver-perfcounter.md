@@ -21,12 +21,13 @@ The Linux [adsprpc driver](https://android.googlesource.com/kernel/msm/+/android
   9.  `PERF_INVOKE`  : complete fastrpc_internal_invoke call
   10. `PERF_KEY_MAX` : bookkeeping (denotes last perf key entry)
 - Each of the above enum entries is actually an offset used to look up and store performance counters in a `struct fastrpc_perf`
+- The `struct fastrpc_file` file descriptor stores a list `struct fastrpc_perf` per process ID
 - Each performance counter in `struct fastrpc_perf` is an `int64_t`
 - The `#define PERF` macro encloses a block of code and times it using [getnstimeofday](https://www.kernel.org/doc/html/latest/core-api/timekeeping.html#c.getnstimeofday)
   - The result is stored into the appropriate key in `struct fastrpc_perf`
 - The `#define GET_COUNTER(perf_ptr, offset)` macro uses pointer arithmetic to retrieve a perf key from a `struct fastrpc_perf` pointer
+  - `perf_ptr` is a `struct fastrpc_perf*`
   - `offset` is one of the enum values above
-    - Since the struct consists of consecutive `int64_t`s, an increment of a `struct fastrpc_perf*` allows consecutive access of the individual counters
-    - 
-- getperfcounter
+    - Since the struct consists of consecutive `int64_t`s, an increment of a `perf_ptr` allows consecutive access of the individual counters
+- `getperfcounter` is used to retrieve an appropriate
 - IOCTL
