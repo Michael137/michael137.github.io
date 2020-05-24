@@ -31,15 +31,21 @@ android-fastcv/
 ```
 
 # Setup
+## Environment Variables
 setup path
 setup NDK root
+## Eclipse
 set eclipse's Java to correct version
-set up projects android version
+## ADT
 copy SDK (symlinks + set up correct build-tools and tools)
-default.properties
+## FastCV SDK
 download fastcv + copy files
+## Import Projects
+set up projects android version
+default.properties
 
+# Compile and Install Applications
 build project
-(turn off lint if necessary)
+  (turn off lint if necessary)
 export signed apk
 adb install
