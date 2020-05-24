@@ -107,3 +107,6 @@ Contrary to what the Qualcomm docs say, the `bin/` directory doesn't necessarily
 4. If you chose `bin/` as your output directory in step 3 then you can install the `bin/<demo>.apk` to your connected device by:
 `adb install bin/<demo>.apk`
 5. The applications should be visible and runnable on your phone
+
+# loadjpeg
+There is a third demo application in the FastCV SDK called **loadjpeg**. However, it [does not work out-of-the-box](https://developer.qualcomm.com/forum/qdn-forums/software/fastcv-computer-vision-sdk/29814)
