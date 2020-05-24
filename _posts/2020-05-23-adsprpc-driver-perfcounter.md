@@ -24,6 +24,9 @@ The Linux [adsprpc driver](https://android.googlesource.com/kernel/msm/+/android
 - Each performance counter in `struct fastrpc_perf` is an `int64_t`
 - The `#define PERF` macro encloses a block of code and times it using [getnstimeofday](https://www.kernel.org/doc/html/latest/core-api/timekeeping.html#c.getnstimeofday)
   - The result is stored into the appropriate key in `struct fastrpc_perf`
-- GET_COUNTER
+- The `#define GET_COUNTER(perf_ptr, offset)` macro uses pointer arithmetic to retrieve a perf key from a `struct fastrpc_perf` pointer
+  - `offset` is one of the enum values above
+    - Since the struct consists of consecutive `int64_t`s, an increment of a `struct fastrpc_perf*` allows consecutive access of the individual counters
+    - 
 - getperfcounter
 - IOCTL
