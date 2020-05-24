@@ -41,7 +41,10 @@ export PATH=$ANDROID_HOME/tools:$PATH
 export PATH=$ANDROID_HOME/platform-tools:$PATH
 export PATH=$HOME/Android/android-ndk-r6:$PATH
 ```
-2. Set the `ANDROID_NDK_ROOT` variable
+2. Set the `ANDROID_NDK_ROOT` variable:
+```bash
+export ANDROID_NDK_ROOT=$HOME/Android/android-ndk-r6
+```
 ## Eclipse
 set eclipse's Java to correct version
 ## ADT
