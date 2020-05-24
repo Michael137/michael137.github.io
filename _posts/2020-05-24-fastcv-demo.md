@@ -45,6 +45,7 @@ export PATH=$HOME/Android/android-ndk-r6:$PATH
 ```bash
 export ANDROID_NDK_ROOT=$HOME/Android/android-ndk-r6
 ```
+
 ## Eclipse
 To prevent obscure errors later down the line make sure Eclipse uses JDK 8.
 
