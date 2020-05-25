@@ -5,10 +5,7 @@ subtitle: What is all this?
 published: true
 ---
 
-# Why?
-
-Where it started: [The God Particle](https://en.wikipedia.org/wiki/The_God_Particle_(book))
-
+- [The God Particle](https://en.wikipedia.org/wiki/The_God_Particle_(book))
 - [THE MAGIC OF 137](https://kabbalahstudent.com/the-magic-of-137/)
 - [There's a glitch at the edge of the universe that could remake physics](https://www.newscientist.com/article/mg24031982-200-theres-a-glitch-at-the-edge-of-the-universe-that-could-remake-physics/)
 - [Why the number 137 is one of the greatest mysteries in physics](https://bigthink.com/surprising-science/number-137-physics)
