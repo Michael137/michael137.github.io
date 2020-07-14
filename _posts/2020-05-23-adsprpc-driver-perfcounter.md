@@ -35,7 +35,7 @@ The Linux *adsprpc* driver dictates communiction between CPU and DSP. Most of th
 - A user-space application can use the `FASTRPC_IOCTL_GETPERF` ioctl command to retrieve performance counters
   - It does essentially the same as `getpercounter` above but copies out some additional information about available performance counters to the user
   
-The [fastrpc_perf](https://cs.android.com/android/platform/superproject/+/master:external/fastrpc/src/fastrpc_perf.c) infrastructure in Android (on supported devices) one can read out these performance counters via `adb logcat` by enabling the appropriate properties. On Android P read out these counters by running:
+Using the [fastrpc_perf](https://cs.android.com/android/platform/superproject/+/master:external/fastrpc/src/fastrpc_perf.c) infrastructure in Android (on supported devices) one can read out these performance counters via `adb logcat` by enabling the appropriate properties. On Android P read out these counters by running:
 ```bash
 adb shell setprop vendor.fastrpc.perf.kernel 1
 adb shell setprop vendor.fastrpc.perf.adsp 1
