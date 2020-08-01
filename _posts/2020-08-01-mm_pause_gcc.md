@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Possible _mm_pause assembly regression on GCC
 date: '2020-08-01'
 ---
