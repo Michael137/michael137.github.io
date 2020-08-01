@@ -47,13 +47,7 @@ test():
  nop
  jmp    401106 <test()+0x4>
 main:
- push   rbp
- mov    rbp,rsp
- mov    eax,0x0
- pop    rbp
- ret    
- nop    WORD PTR cs:[rax+rax*1+0x0]
- nop    DWORD PTR [rax+0x0]
+ ...
 ```
 
 Note how we have a `nop` in between the `pause` instructions which we can't map back to the source snippet.
