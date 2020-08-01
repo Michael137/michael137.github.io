@@ -56,6 +56,6 @@ main:
  nop    DWORD PTR [rax+0x0]
 ```
 
-Note how we have a `nop` in between the `pause` instructions which we can't map back to the source snippet.
+Note how we have a `nop` in between the `pause` instructions which we can't map back to the source snippet. Even with more interesting functions and loops will this translation occur.
 
 Why this is happening will need some digging inside GCC. Check back in the next couple of weeks and there might be answer why this change ever occurred and whether it truly is a regression or not.
