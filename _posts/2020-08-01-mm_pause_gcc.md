@@ -5,7 +5,7 @@ title: Possible _mm_pause assembly regression on GCC
 date: '2020-08-01'
 ---
 
-While homebrewing some spinlocks I discovered an interesting possible regression in the compilation of the [_mm_pause](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_pause&expand=4141,4141) intrinsic on GCC. On supported architectures this intrinsic should translate to a [PAUSE](https://c9x.me/x86/html/file_module_x86_id_232.html) instruction, which can be used to stop CPU pipeline flushes in typical spin-locks.
+While homebrewing some spinlocks I discovered an interesting possible regression in the compilation of the [_mm_pause](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_pause&expand=4141,4141) intrinsic on GCC. On supported architectures this intrinsic should translate to a [PAUSE](https://c9x.me/x86/html/file_module_x86_id_232.html) instruction, which can be used to stop CPU pipeline flushes in typical spin-locks after a lock has been released/acquired.
 
 The assembly generated on GCC trunk adds a mysterious `NOP` after each `PAUSE`: [assembly](https://godbolt.org/z/PrWxrT)
 
