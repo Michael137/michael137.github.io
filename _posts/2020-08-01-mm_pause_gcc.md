@@ -31,7 +31,7 @@ void test()
 
 translates to:
 
-```
+```assembly
 test():
  push   rbp
  mov    rbp,rsp
