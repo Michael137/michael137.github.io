@@ -4,7 +4,7 @@ published: true
 title: Quick 'n' Dirty Branch Statistics with GCC
 date: '2020-08-27'
 ---
-In the appendix of Ulrich Drepper's 2007 paper on [memory and computer architecture](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) he demonstrates a way to verify how bad our branch prediction intuition truly is. To my amusement it still works, mostly untouched. Let's see what we can do with it.
+In the appendix of Ulrich Drepper's 2007 paper on [memory and computer architecture](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) he demonstrates a way to verify how bad our branch prediction intuition truly is. Gladly it still works, mostly untouched. Let's see what we can do with it.
 
 # TLDR
 Using [this working example](https://godbolt.org/z/EqPonc) and a sneaky `#define if(expr) if(likely((expr)))` go ahead and explore how often your branches are really being taken.
