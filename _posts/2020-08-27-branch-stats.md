@@ -6,6 +6,8 @@ date: '2020-08-27'
 ---
 In the appendix of Ulrich Drepper's 2007 paper on [memory and computer architecture](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) he demonstrates a way to verify how bad our branch prediction intuition truly is. To my amusement it still works, mostly untouched. Let's see what we can do with it.
 
+**TLDR:** [Example](https://godbolt.org/z/4aqE8K)
+
 # The Code
 {% gist cdc01bf9a8f141ed37065ee5cdd4ef89 %}
 
@@ -21,7 +23,7 @@ I.e., if we predicted incorrectly, the first counter is chosen and incremented. 
 
 **Note**: the original code had to be slightly modified to store the expression outcome in a separate variable (`_b`) before passing it to the inline assembly block. Otherwise, on of the the tested systems GCC 10.2 complained about an invalid index expression.
 
-To access the counters we rely on some linker magic
+To access the counters we rely on some linker magic. First we want to make sure we create the sections we reference in the inline assembly above somewhere in our code. We mark the `predict_data` section as writable (`w`) so we can update the counters.
 
 {% gist 8092ffe8423ba4ef6257a7b04463634f %}
 
