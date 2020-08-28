@@ -19,6 +19,8 @@ section_address = addressOf(predictctn) + 8 * (prediction == outcome)
 
 I.e., if we predicted incorrectly, the first counter is chosen and incremented. Otherwise we skip 8-bytes to the second counter (thanks to having organized our data in sections).
 
+**Note**: the original code had to be slightly modified to store the expression outcome in a separate variable (`_b`) before passing it to the inline assembly block. Otherwise, on of the the tested systems GCC 10.2 complained about an invalid index expression.
+
 {% gist 8092ffe8423ba4ef6257a7b04463634f %}
 
 ## Compiling
