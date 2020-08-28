@@ -28,6 +28,6 @@ To access the counters we rely on some linker magic
 ## Compiling
 In the above code we assume a 64-bit architecture. In the original snippet, U. Drepper accounted for 32-bit systems as well.
 
-On some systems you will have to tell GCC not to produce a position independent executable (PIE) using: `-no-pie`. Also this technique assumes your project is compiled using the GNU assembler.
+On some systems you will have to tell GCC not to produce a position independent executable (PIE) using: `-no-pie`. Also this technique assumes your project is assembled using the GNU assembler.
 
 The C++ standard forbids the expression grouping we did in the `debugpred__` define. For us it's a non-issue since GCC supports it.
