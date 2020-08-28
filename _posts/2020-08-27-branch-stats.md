@@ -9,7 +9,7 @@ In the appendix of Ulrich Drepper's 2007 paper on [memory and computer architect
 # TLDR
 Using [this working example](https://godbolt.org/z/EqPonc) and a sneaky `#define if(expr) if(likely((expr)))` go ahead and explore how often your branches are really being taken.
 
-![BENCHPRED](/img/benchpred_test.png)
+![BRANCHPRED](/img/branchpred_test.png)
 
 # The Code
 {% gist cdc01bf9a8f141ed37065ee5cdd4ef89 %}
