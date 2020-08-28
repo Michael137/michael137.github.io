@@ -21,11 +21,13 @@ I.e., if we predicted incorrectly, the first counter is chosen and incremented. 
 
 **Note**: the original code had to be slightly modified to store the expression outcome in a separate variable (`_b`) before passing it to the inline assembly block. Otherwise, on of the the tested systems GCC 10.2 complained about an invalid index expression.
 
+To access the counters we rely on some linker magic
+
 {% gist 8092ffe8423ba4ef6257a7b04463634f %}
 
 ## Compiling
 In the above code we assume a 64-bit architecture. In the original snippet, U. Drepper accounted for 32-bit systems as well.
 
-On some systems you will have to tell GCC not to produce a position independent executable (PIE) using: `-no-pie`
+On some systems you will have to tell GCC not to produce a position independent executable (PIE) using: `-no-pie`. Also this technique assumes your project is compiled using the GNU assembler.
 
 The C++ standard forbids the expression grouping we did in the `debugpred__` define. For us it's a non-issue since GCC supports it.
