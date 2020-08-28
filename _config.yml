@@ -110,17 +110,13 @@ google_analytics: "UA-159037068-1"
 # --- Comments --- #
 
 # Fill in your Disqus shortname (NOT the userid) if you want to support Disqus comments
-# disqus: "<disqus shortname>"
+disqus: "michael137"
 
 # If you want to use JustComments fill with the API Key
 #just-comments: "ABCD-EFGH-IJKL"
 
 # To use Facebook Comments, fill in a Facebook App ID
 fb_comment_id: "521471178797976"
-
-# To use Staticman comments, fill in repository, branch, and endpoint
-staticmanUrl: https://area137-staticman.herokuapp.com/v2/entry/Michael137/michael137.github.io/master/comments
-enableComments: true
 
 # --- Misc --- #
 
