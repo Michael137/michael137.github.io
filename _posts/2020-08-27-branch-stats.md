@@ -31,7 +31,7 @@ To access the counters we rely on some linker magic. First we want to make sure 
 {% gist 8092ffe8423ba4ef6257a7b04463634f %}
 
 ## Compiling
-We assume a 64-bit architecture and that your project is assembled using the GNU assembler. In the original snippet, U. Drepper accounted for 32-bit systems as well.
+We assume a 64-bit architecture and that your project is assembled and linked using the GNU assembler and linker respectively. In the original snippet, U. Drepper accounted for 32-bit systems as well.
 
 On some systems you will have to tell GCC not to produce a position independent executable (PIE) using: `-no-pie`.
 
