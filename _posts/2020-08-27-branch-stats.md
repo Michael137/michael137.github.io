@@ -8,3 +8,6 @@ In the appendix of Ulrich Drepper's 2007 paper on [memory and computer architect
 
 # The Code
 {% gist cdc01bf9a8f141ed37065ee5cdd4ef89 %}
+
+
+{% gist 8092ffe8423ba4ef6257a7b04463634f %}
