@@ -13,7 +13,7 @@ Essentially the above will generate a section (a block of instructions and data 
 
 The meat is in the last line of assembly. We increment one of the two counters by:
 ```
-section_address = addressOf(predictctn) + 8 * (prediction == expression outcome)
+section_address = addressOf(predictctn) + 8 * (prediction == outcome)
 *section_address += 1
 ```
 
