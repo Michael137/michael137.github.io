@@ -9,13 +9,19 @@ In the appendix of Ulrich Drepper's 2007 paper on [memory and computer architect
 # The Code
 {% gist cdc01bf9a8f141ed37065ee5cdd4ef89 %}
 
-Essentially the above will generate a section (a block of instructions and data in your final executable, kind of) in your assembly for each branch that you instrument. In each section we allocate two 8-byte counters (`.quad 0; .quad 0`). The [%=](https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html) will generate a unique identifier and append it to the section name (so each branch will have its own counter). Similarly, we store the line number and filename.
+Essentially the above will generate a section (a block of instructions and data in your final executable, kind of) in your assembly for each branch that you instrument. In each section we allocate two 8-byte counters (`.quad 0; .quad 0`). The [%=](https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html) will generate a unique identifier and append it to the section name (so each branch will have its own counter). Similarly, we store the line number and filename of where the branch occurred.
 
-The meat is in the last line of assembly. We increment one of the two counters by: `
+The meat is in the last line of assembly. We increment one of the two counters by:
+```
+section_address = addressOf(predictctn) + 8 * (prediction == expression outcome)
+*section_address += 1
+```
 
 {% gist 8092ffe8423ba4ef6257a7b04463634f %}
 
 ## Compiling
+In the above code we assume a 64-bit architecture. In the original snippet, U. Drepper accounted for 32-bit systems as well.
+
 On some systems you will have to tell GCC not to produce a position independent executable (PIE) using: `-no-pie`
 
 The C++ standard forbids the expression grouping we did in the `debugpred__` define. For us it's a non-issue since GCC supports it.
