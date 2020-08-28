@@ -7,7 +7,7 @@ date: '2020-08-27'
 In the appendix of Ulrich Drepper's 2007 paper on [memory and computer architecture](https://people.freebsd.org/~lstewart/articles/cpumemory.pdf) he demonstrates a way to verify how bad our branch prediction intuition truly is. The code still works like a charm, mostly untouched. Let's see what we can do with it.
 
 # TLDR
-Using [this working example](https://godbolt.org/z/EqPonc) and a sneaky `#define if(expr) if(likely((expr)))` we can explore how often your branches are really being taken.
+Using [this working example](https://godbolt.org/z/EqPonc) and a sneaky `#define if(expr) if(likely((expr)))` we can explore how often our branches are really being taken.
 
 ![BRANCHPRED](/img/branchpred_test.png)
 
