@@ -17,6 +17,8 @@ section_address = addressOf(predictctn) + 8 * (prediction == expression outcome)
 *section_address += 1
 ```
 
+I.e., if we predicted incorrectly, the first counter is chosen and incremented. Otherwise we skip 8-bytes to the second counter (thanks to having organized our data in sections).
+
 {% gist 8092ffe8423ba4ef6257a7b04463634f %}
 
 ## Compiling
