@@ -26,7 +26,7 @@ I.e., if we predicted incorrectly, the first counter is chosen and incremented. 
 
 **Note**: the original code had to be slightly modified to store the expression outcome in a separate variable (`_b`) before passing it to the inline assembly block. Otherwise, on one of the tested systems GCC 10.2 complained about an invalid index expression.
 
-To access the counters we rely on some linker magic. First we want to make sure we create the sections we reference in the inline assembly above somewhere in our code. We mark the `predict_data` section as writable (`w`) so we can update the counters. The linker will have generated `__start` and `__stop` variables corresponding to our section names. Then we simply run through the counters we stored for each branch (we ensured contiguous counts inside the `predict_data` section using `.pushsection`).
+To access the counters we rely on some linker magic. First we want to make sure we create  somewhere in our code the sections we reference in the `debugpred__` assembly. We mark the `predict_data` section as writable (`w`) so we can update the counters. The linker will have generated `__start` and `__stop` variables corresponding to our section names. Then we simply run through the counters we stored for each branch (we ensured contiguous counts inside the `predict_data` section using `.pushsection`).
 
 {% gist 8092ffe8423ba4ef6257a7b04463634f %}
 
